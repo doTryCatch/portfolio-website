@@ -1,0 +1,50 @@
+{
+  "Education": [
+    {
+      "name": "Bachelor of Science in Computer Science",
+      "year": "2020",
+      "description": "Studied various computer science topics including algorithms, data structures, and software engineering."
+    },
+    {
+      "name": "Master of Science in Artificial Intelligence",
+      "year": "2022",
+      "description": "Focused on machine learning, natural language processing, and neural networks."
+    }
+  ],
+  "Experience": [
+    {
+      "name": "Software Engineer at XYZ Corp",
+      "year": "2020 - 2022",
+      "description": "Worked on developing scalable web applications and microservices."
+    },
+    {
+      "name": "Senior AI Engineer at ABC Inc",
+      "year": "2022 - Present",
+      "description": "Leading a team of AI engineers to develop cutting-edge AI solutions."
+    }
+  ],
+  "Skills": [
+    {
+      "name": "Programming Languages",
+      "year": "",
+      "description": "Proficient in Python, JavaScript, and C++."
+    },
+    {
+      "name": "Tools & Technologies",
+      "year": "",
+      "description": "Experienced with TensorFlow, PyTorch, Docker, and Kubernetes."
+    }
+  ],
+  "Certifications": [
+    {
+      "name": "Certified Kubernetes Administrator",
+      "year": "2021",
+      "description": "Gained in-depth knowledge and practical experience in Kubernetes."
+    },
+    {
+      "name": "AWS Certified Solutions Architect",
+      "year": "2022",
+      "description": "Demonstrated expertise in designing and deploying scalable applications on AWS."
+    }
+  ]
+}
