@@ -1,26 +1,11 @@
-// app/user/[id]/page.js
-
+// app/[userId]/page.js
 export default function UserProfile({ params }: any) {
   const { id } = params;
-  console.log(params);
+
   return (
     <div>
-      <h1>User Profile: {id}</h1>
+      <h1>User Profile</h1>
+      <p>User ID: {id}</p>
     </div>
   );
-}
-
-export async function generateStaticParams() {
-  const users = [{ id: "1" }, { id: "2" }, { id: "3" }];
-  return users.map((user) => ({ id: user.id }));
-}
-
-export async function serverSideProps({ params }: any) {
-  const { id } = params;
-  console.log(params);
-  return {
-    props: {
-      id,
-    },
-  };
 }

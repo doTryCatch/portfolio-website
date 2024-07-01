@@ -3,7 +3,13 @@ import resume from "../data/resume.json";
 import Image from "next/image";
 import Book from "../image/book.png";
 
-function Portfolio() {
+interface ResumeItem {
+  name: string;
+  year: string;
+  description: string;
+}
+
+const Portfolio = () => {
   return (
     <div className="about font-sans font-medium space-y-4 ">
       <h1 className="h1 text-[30px]"> Resume </h1>{" "}
@@ -23,23 +29,25 @@ function Portfolio() {
             </div>{" "}
             <ol className="space-y-6 m-8">
               {" "}
-              {resume[val].map((elem, Key) => (
-                <li key={Key}>
-                  <div className="content-area space-y-1">
-                    <h1 className="text-white text-bold text-[15px]">
-                      {" "}
-                      {elem.name}{" "}
-                    </h1>{" "}
-                    <h2> {elem.year} </h2> <p> {elem.description} </p>{" "}
-                  </div>{" "}
-                </li>
-              ))}{" "}
+              {resume[val as keyof typeof resume].map(
+                (elem: ResumeItem, Key: number) => (
+                  <li key={Key}>
+                    <div className="content-area space-y-1">
+                      <h1 className="text-white text-bold text-[15px]">
+                        {" "}
+                        {elem.name}{" "}
+                      </h1>{" "}
+                      <h2> {elem.year} </h2> <p> {elem.description} </p>{" "}
+                    </div>{" "}
+                  </li>
+                )
+              )}{" "}
             </ol>{" "}
           </div>
         ))}{" "}
       </div>{" "}
     </div>
   );
-}
+};
 
 export default Portfolio;
