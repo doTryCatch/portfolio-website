@@ -25,7 +25,7 @@ function Porject() {
           <>
             <Link href={`/posts/${project.id}`}>
               <div
-                className="project-card bg-white color rounded-3xl "
+                className="project-card bg-transparent rounded-3xl "
                 key={key}
               >
                 <div className="icon rounded-full m-4">
