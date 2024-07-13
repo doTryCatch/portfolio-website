@@ -13,6 +13,7 @@
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
+    "@prisma/client": "^5.16.1",
     "@types/mdx": "^2.0.13",
     "markdown": "^0.5.0",
     "markdown-to-jsx": "^7.4.7",
@@ -31,6 +32,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "prisma": "^5.16.1",
     "raw-loader": "^4.0.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

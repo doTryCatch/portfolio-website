@@ -20,6 +20,20 @@ function Main({ page }: any) {
   const [path, setPath] = useState("About");
   const [scroll, setScroll] = useState(0);
   const router = useRouter();
+  const [data, setData] = useState({});
+
+  const handleGet = () => {
+    setData(
+      fetch("/api")
+        .then((resonse) => {
+          return resonse.json();
+        })
+        .then((data) => {
+          console.log(data);
+          return data;
+        })
+    );
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +70,7 @@ function Main({ page }: any) {
           <li onClick={navigate} value="Contact">
             Blogs
           </li>
+          <li onClick={handleGet}>get</li>
         </ul>
       </div>
       <div className="main-content-area m-2  gap-8 md:m-5  md:flex">
