@@ -13,6 +13,8 @@
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
+    "@nivo/bar": "^0.87.0",
+    "@nivo/geo": "^0.87.0",
     "@prisma/client": "^5.16.1",
     "@types/mdx": "^2.0.13",
     "markdown": "^0.5.0",

@@ -21,19 +21,19 @@ function Main({ page }: any) {
   const [scroll, setScroll] = useState(0);
   const router = useRouter();
   const [data, setData] = useState({});
-
-  const handleGet = () => {
-    setData(
-      fetch("/api")
-        .then((resonse) => {
-          return resonse.json();
-        })
-        .then((data) => {
-          console.log(data);
-          return data;
-        })
-    );
-  };
+  // below code was create for the trail of api with postgres for data fetching
+  // const handleGet = () => {
+  //   setData(
+  //     fetch("/api")
+  //       .then((resonse) => {
+  //         return resonse.json();
+  //       })
+  //       .then((data) => {
+  //         console.log(data);
+  //         return data;
+  //       })
+  //   );
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,8 +58,8 @@ function Main({ page }: any) {
     <section className="body w-[100%]">
       <div className="navbar scroll-smooth border-2 border-transparent md:sticky md:top-0  fixed bottom-0  w-[100%]">
         <ul className="nav-list-items h-10 center card-color  gap-12 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-40">
-          <li onClick={navigate} value="about">
-            About
+          <li onClick={navigate} value="Dashboard">
+            Dashboard
           </li>
           <li onClick={navigate} value="resume">
             Resume
@@ -70,7 +70,6 @@ function Main({ page }: any) {
           <li onClick={navigate} value="Contact">
             Blogs
           </li>
-          <li onClick={handleGet}>get</li>
         </ul>
       </div>
       <div className="main-content-area m-2  gap-8 md:m-5  md:flex">
