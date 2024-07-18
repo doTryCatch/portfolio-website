@@ -1,6 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+test.js
+text.txt
+
 /node_modules
 /.pnp
 .pnp.js
@@ -21,6 +24,7 @@
 *.pem
 
 # debug
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
