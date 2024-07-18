@@ -1,8 +1,8 @@
-const GITHUB_USERNAME = "doTryCatcn";
-// const GITHUB_TOKEN = "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";
-const GITHUB_TOKEN =
-  "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";
-// Octokit.js
+// const GITHUB_USERNAME = "doTryCatcn";
+// // const GITHUB_TOKEN = "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";
+// const GITHUB_TOKEN =
+//   "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";
+// // Octokit.js
 
 const fetchGitHubRepos = async () => {
   try {
