@@ -14,6 +14,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.intro {
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(210, 5, 56), silver, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h1,
 h2,
 h3 {
@@ -34,6 +41,17 @@ h3 {
   background-color: rgb(35, 35, 35);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.blogs-card {
+  background-color: transparent;
+  color: rgb(106, 104, 104);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+span {
+  color: white;
+  font-size: medium;
 }
 
 .tech-tag {
@@ -86,8 +104,9 @@ ol {
 
 li {
   cursor: pointer;
+  user-select: none;
 }
 
 li:hover {
-  color: rgb(254, 191, 1);
+  color: rgb(234, 43, 84);
 }

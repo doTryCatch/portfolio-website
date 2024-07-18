@@ -56,7 +56,7 @@ function Main({ page }: any) {
 
   return (
     <section className="body w-[100%]">
-      <div className="navbar scroll-smooth border-2 border-transparent md:sticky md:top-0  fixed bottom-0  w-[100%]">
+      <div className="navbar scroll-smooth border-2 border-transparent md:sticky md:top-0 z-10 fixed bottom-0  w-[100%]">
         <ul className="nav-list-items h-10 center card-color  gap-12 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-40">
           <li onClick={navigate} value="Dashboard">
             Dashboard
@@ -73,7 +73,7 @@ function Main({ page }: any) {
         </ul>
       </div>
       <div className="main-content-area m-2  gap-8 md:m-5  md:flex">
-        <div className="profile-card h-fit   card-color rounded-xl  border-2 border-transparent  md:w-[20%] sticky md:top-10 top-0">
+        <div className="profile-card h-fit   card-color rounded-xl  border-2 border-transparent  md:w-[20%] z-10 sticky md:top-10 top-0">
           <div className="card-content  md:block flex  m-4 space-x-5 md:space-x-0 ">
             <div className="profile-image center ">
               <div className="img h-[15vh]  md:h-[25vh] w-[15vh] md:w-[25vh] br_sd   bg-white rounded-full overflow-hidden">

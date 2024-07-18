@@ -1,44 +1,35 @@
-// Define the API endpoints
-const apiEndpoints = [
-    "https://jsonplaceholder.typicode.com/posts/1",
-    "https://jsonplaceholder.typicode.com/posts/2",
-    "https://jsonplaceholder.typicode.com/posts/3",
-    "https://jsonplaceholder.typicode.com/posts/4",
-    "https://jsonplaceholder.typicode.com/posts/5",
-];
+const GITHUB_USERNAME = "doTryCatcn";
+// const GITHUB_TOKEN = "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";
+const GITHUB_TOKEN =
+  "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";
+// Octokit.js
 
-// Create an array of fetch promises
+const fetchGitHubRepos = async () => {
+  try {
+    const headers = {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Accept: "application/vnd.github.v3+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
 
-const fetchPromises = apiEndpoints.map(async(url) => {
-    console.log(`Fetching ${url}`);
-    return await fetch(url)
-        .then(async(response) => {
-            return await response.json();
-        })
-        .then(async(jsonData) => {
-            return jsonData;
-        });
-});
-// var fetchedData = [];
-// for (const url of apiEndpoints) {
-//     console.log(`Fetching ${url}`);
-//     const response = await fetch(url);
+    // Fetch repositories
+    const reposResponse = await fetch(
+      `https://api.github.com/users/doTryCatch/repos`
+      //   {
+      //     headers,
+      //   }
+    );
+    const reposData = await reposResponse.json();
 
-//     const jsonData = await response.json();
+    if (reposResponse.status !== 200) {
+      console.error("Repositories:", reposData);
+      return;
+    }
 
-//     fetchedData.push(jsonData);
-// }
-
-console.log(fetchPromises[0][0]);
-// Measure the execution time
-// const start = performance.now();
-
-// Promise.all(fetchPromises)
-//     .then((results) => {
-//         const end = performance.now();
-//         console.log("All requests completed in", end - start, "ms");
-//         console.log("Results:", results);
-//     })
-//     .catch((error) => {
-//         console.error("One or more requests failed:", error);
-//     });
+    console.log("Repositories:", reposData);
+  } catch (error) {
+    console.error("Error fetching GitHub repositories:", error);
+  }
+};
+// curl --request GET  --url "https://api.github.com/octocat" --header "Authorization: Bearer " --header "X-GitHub-Api-Version: 2022-11-28"
+fetchGitHubRepos();
