@@ -20,6 +20,36 @@ const blogs = [
     url: "https://example.com/second-blog-post",
     date: "2024-07-15",
   },
+  {
+    id: 1,
+    title: "First Blog Post",
+    summary:
+      "This is the summary of the first blog post. this blog covers all the concept of webrtc and either it is serverless or with server gonna be discussed in brief way",
+    url: "https://example.com/first-blog-post",
+    date: "2024-07-18",
+  },
+  {
+    id: 2,
+    title: "Second Blog Post",
+    summary: "This is the summary of the second blog post.",
+    url: "https://example.com/second-blog-post",
+    date: "2024-07-15",
+  },
+  {
+    id: 1,
+    title: "First Blog Post",
+    summary:
+      "This is the summary of the first blog post. this blog covers all the concept of webrtc and either it is serverless or with server gonna be discussed in brief way",
+    url: "https://example.com/first-blog-post",
+    date: "2024-07-18",
+  },
+  {
+    id: 2,
+    title: "Second Blog Post",
+    summary: "This is the summary of the second blog post.",
+    url: "https://example.com/second-blog-post",
+    date: "2024-07-15",
+  },
 ];
 
 function Dashboard() {
@@ -29,7 +59,7 @@ function Dashboard() {
         <div className="left-portion ">
           <div className=" h-48 py-4 text-[25px] md:text-[45px]">
             <h1>👋,</h1>
-            <div className="name flex gap-4">
+            <div className="name flex ">
               <h1 className="">I{"'"}m</h1>
               <h1 className="intro"> Roshan Kumar Patel</h1>
             </div>
@@ -66,7 +96,7 @@ function Dashboard() {
         <div className="right-portion">
           <h1>Statistics</h1>
           <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"></div>
-          <div className="graph-container  h-[30vh] w-[50vh] ">
+          <div className="graph-container  h-[30vh] w-[30vh] ">
             <MyResponsivePie />
           </div>
         </div>

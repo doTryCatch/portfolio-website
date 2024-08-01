@@ -20,12 +20,12 @@ function Porject() {
           </ul>{" "}
         </div>{" "}
       </div>{" "}
-      <div className="project-card-container grid md:grid-cols-3 grid-cols-1 grid-row-auto gap-5 my-10">
+      <div className="project-card-container grid md:grid-cols-3 grid-cols-1 grid-row-auto gap-10 my-10">
         {Projects.map((project, key) => (
           <>
             <Link href={`/posts/${project.id}`}>
               <div
-                className="project-card bg-transparent rounded-3xl "
+                className="project-card card-style w-full  rounded-2xl p-2"
                 key={key}
               >
                 <div className="icon rounded-full m-4">
@@ -51,7 +51,9 @@ function Porject() {
                   })}
                 </div>{" "}
                 <div className="post-date flex mx-4 text-slate-300 text-[12px]">
-                  <time dateTime="1995-05-15">{project.post_date}</time>
+                  <time dateTime="1995-05-15" className=" center">
+                    {project.post_date}
+                  </time>
                   <span>.</span>
                   <span>{project.watch_time}</span>
                 </div>{" "}

@@ -2,22 +2,21 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
+import Link from "next/link";
 import Profile_pic from "./image/profile.jpg";
 import Hobby from "./image/hobby.png";
 import DropDown from "./image/dropdown.png";
 import Insta from "./image/Insta.png";
 import Github from "./image/Github.png";
-// import About from "./components/about";
-import Contact from "./components/blog";
-import Portfolio from "./components/portfolio";
-import Project from "./components/project";
-import Link from "next/link";
+import Contact_info from "./data/profile.json";
+import Phone from "./image/Phone.png";
+const Img = Contact_info.filter((elem) => (elem.img = "./image/" + elem.img));
+
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
 function Main({ page }: any) {
   const [dropdown, setDropDown] = useState(false);
-  const [path, setPath] = useState("About");
+  const [path, setPath] = useState("dashboard");
   const [scroll, setScroll] = useState(0);
   const router = useRouter();
   const [data, setData] = useState({});
@@ -34,40 +33,62 @@ function Main({ page }: any) {
   //       })
   //   );
   // };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const navigate = (e: any) => {
     router.push("/" + e.currentTarget.getAttribute("value").toLowerCase());
-    setPath(e.currentTarget.getAttribute("value"));
+    setPath(e.currentTarget.getAttribute("value").toLowerCase());
   };
 
   const handleClick = () => {
     setDropDown((prev) => !prev);
+    console.log(dropdown);
   };
 
   return (
     <section className="body w-[100%]">
-      <div className="navbar scroll-smooth border-2 border-transparent md:sticky md:top-0 z-10 fixed bottom-0  w-[100%]">
-        <ul className="nav-list-items h-10 center card-color  gap-12 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-40">
-          <li onClick={navigate} value="Dashboard">
+      <div className="navbar scroll-smooth  border-2 border-transparent md:sticky md:top-0 z-10 fixed -bottom-1  w-[100%] ">
+        <ul className="nav-list-items h-12 center bg-pink-600  gap-6 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-90 md:bg-opacity-100">
+          <li
+            onClick={navigate}
+            value="Dashboard"
+            className={
+              path === "dashboard"
+                ? "underline underline-offset-2"
+                : "no-underline"
+            }
+          >
             Dashboard
           </li>
-          <li onClick={navigate} value="resume">
+          <li
+            onClick={navigate}
+            value="resume"
+            className={
+              path === "resume"
+                ? "underline underline-offset-2"
+                : "no-underline"
+            }
+          >
             Resume
           </li>
-          <li onClick={navigate} value="Project">
+          <li
+            onClick={navigate}
+            value="Project"
+            className={
+              path === "project"
+                ? "underline underline-offset-2"
+                : "no-underline"
+            }
+          >
             Projects
           </li>
-          <li onClick={navigate} value="Contact">
+          <li
+            onClick={navigate}
+            value="Contact"
+            className={
+              path === "contact"
+                ? "underline underline-offset-2"
+                : "no-underline"
+            }
+          >
             Blogs
           </li>
         </ul>
@@ -76,7 +97,7 @@ function Main({ page }: any) {
         <div className="profile-card h-fit   card-color rounded-xl  border-2 border-transparent  md:w-[20%] z-10 sticky md:top-10 top-0">
           <div className="card-content  md:block flex  m-4 space-x-5 md:space-x-0 ">
             <div className="profile-image center ">
-              <div className="img h-[15vh]  md:h-[25vh] w-[15vh] md:w-[25vh] br_sd   bg-white rounded-full overflow-hidden">
+              <div className="img h-[15vh]  md:h-[25vh] w-[15vh] md:w-[25vh] br_sd   bg-white rounded-3xl overflow-hidden">
                 <Image
                   src={Profile_pic}
                   alt="Hobby-Image"
@@ -104,41 +125,53 @@ function Main({ page }: any) {
             </div>
           </div>
 
-          <div className={dropdown ? "block" : "hidden"}>
-            <div>
-              <hr />
+          <div className={dropdown ? "block md:block" : "hidden md:block"}>
+            <div className="center py-4">
+              <div className="w-[60%] color"></div>
             </div>
-            <div className={dropdown ? "contact-info" : "hidden"}>
-              {/* <div>
-                {Object.keys(Contact_info).map((key, index) => (
-                  <div key={index}>
-                    <div>
-                      <Image
-                        src={Contact_info[key].img}
-                        alt=""
-                        width={40}
-                        height={40}
-                      />
+            <div className={"contact-info"}>
+              <div className="m-2 space-y-6">
+                {Contact_info.map((data: any, index: number) => (
+                  <div key={index} className=" m-4 flex space-x-5 ">
+                    <div className="center  rounded-xl card-style w-[15%] h-[15%] md:w-[20%] md:h-[05%] p-2 ">
+                      <Image src={Phone} alt="" width={40} height={40} />
                     </div>
-                    <div>
+                    <div className="contact-content w-[75%] overflow-hidden text-ellipsis">
                       <div>
-                        <div>{key.toUpperCase()}</div>
                         <div>
-                          <p>{Contact_info[key].content}</p>
+                          {" "}
+                          <p>{data.heading.toUpperCase()}</p>
+                        </div>
+                        <div>
+                          <a href="example.com" className="contact-link">
+                            {data.value}
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 ))}
-              </div> */}
+              </div>
             </div>
             <div>
-              <hr />
+              <div className="center my-10">
+                <div className="w-[60%] color"></div>
+              </div>
             </div>
-            <div>
-              <div>
+            <div className="m-4">
+              <div className=" m-2 flex h-8 w-8 space-x-4">
                 <Image src={Insta} alt="Instagram Icon" />
-                <Image src={Github} alt="GitHub Icon" />
+                <Link
+                  href="https://github.com/doTryCatch/doTryCatch"
+                  legacyBehavior
+                >
+                  <Image
+                    src={Github}
+                    alt="GitHub Icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
               </div>
             </div>
           </div>
