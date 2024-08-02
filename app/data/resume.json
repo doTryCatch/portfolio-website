@@ -1,50 +1,57 @@
 {
   "Education": [
     {
-      "name": "Bachelor of Science in Computer Science",
-      "year": "2020",
-      "description": "Studied various computer science topics including algorithms, data structures, and software engineering."
+      "name": "B. Tech in Computer Science and Engineering at GH Raisoni University",
+      "year": "2022 - 2026",
+      "description": "Studying core topics in computer science with practical experience in modern technologies."
     },
     {
-      "name": "Master of Science in Artificial Intelligence",
-      "year": "2022",
-      "description": "Focused on machine learning, natural language processing, and neural networks."
+      "name": "Senior School Leaving Certificate (SLC) at Trinity International College",
+      "year": "2020 - 2022",
+      "description": "Achieved a GPA of 3.53 in the Science stream, building a strong foundation in science and math."
+    },
+    {
+      "name": "Secondary Education Examination (SEE) at Bright Land Secondary School",
+      "year": "2017 - 2020",
+      "description": "Graduated with a perfect GPA of 4.0, establishing a solid academic base."
     }
   ],
   "Experience": [
     {
-      "name": "Software Engineer at XYZ Corp",
-      "year": "2020 - 2022",
-      "description": "Worked on developing scalable web applications and microservices."
-    },
-    {
-      "name": "Senior AI Engineer at ABC Inc",
-      "year": "2022 - Present",
-      "description": "Leading a team of AI engineers to develop cutting-edge AI solutions."
+      "name": "Full Stack Developer",
+      "year": "2023 - Present",
+      "description": "Over 1 year in full-stack development, focusing on both frontend and backend technologies."
     }
   ],
   "Skills": [
     {
       "name": "Programming Languages",
       "year": "",
-      "description": "Proficient in Python, JavaScript, and C++."
+      "description": "Proficient in JavaScript, React, Node.js, Express, MongoDB, Python, and Git."
     },
     {
       "name": "Tools & Technologies",
       "year": "",
-      "description": "Experienced with TensorFlow, PyTorch, Docker, and Kubernetes."
+      "description": "Familiar with C, C++, Linux, TypeScript, MySQL, PostgreSQL, and Prisma."
     }
   ],
   "Certifications": [
     {
-      "name": "Certified Kubernetes Administrator",
-      "year": "2021",
-      "description": "Gained in-depth knowledge and practical experience in Kubernetes."
+      "name": "Full-Ride Scholarship at GH Raisoni University",
+      "year": "2022",
+      "description": "Awarded by the Embassy of India for academic excellence."
+    }
+  ],
+  "Accomplishments": [
+    {
+      "name": "Second Position at Code Treasure Hunt",
+      "year": "2023",
+      "description": "Achieved second place in the university-level Code Treasure Hunt at GH Raisoni University."
     },
     {
-      "name": "AWS Certified Solutions Architect",
-      "year": "2022",
-      "description": "Demonstrated expertise in designing and deploying scalable applications on AWS."
+      "name": "75+ WPM Typing Speed",
+      "year": "2024",
+      "description": "Typing speed of over 75 words per minute, demonstrating high proficiency."
     }
   ]
 }

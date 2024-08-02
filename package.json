@@ -13,6 +13,7 @@
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
+    "@nextui-org/skeleton": "^2.0.31",
     "@nivo/bar": "^0.87.0",
     "@nivo/geo": "^0.87.0",
     "@nivo/pie": "^0.87.0",

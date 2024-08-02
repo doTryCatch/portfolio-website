@@ -27,8 +27,8 @@ const Portfolio = () => {
                 {val}{" "}
               </div>{" "}
             </div>{" "}
-            <ol className="space-y-6 m-8">
-              {" "}
+            <ol className="space-y-6 md:m-8 my-8 ml-8 ">
+              {/* mx-2 my-4 ml-12"> */}{" "}
               {resume[val as keyof typeof resume].map(
                 (elem: ResumeItem, Key: number) => (
                   <li key={Key}>

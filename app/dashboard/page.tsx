@@ -13,43 +13,6 @@ const blogs = [
     url: "https://example.com/first-blog-post",
     date: "2024-07-18",
   },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    summary: "This is the summary of the second blog post.",
-    url: "https://example.com/second-blog-post",
-    date: "2024-07-15",
-  },
-  {
-    id: 1,
-    title: "First Blog Post",
-    summary:
-      "This is the summary of the first blog post. this blog covers all the concept of webrtc and either it is serverless or with server gonna be discussed in brief way",
-    url: "https://example.com/first-blog-post",
-    date: "2024-07-18",
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    summary: "This is the summary of the second blog post.",
-    url: "https://example.com/second-blog-post",
-    date: "2024-07-15",
-  },
-  {
-    id: 1,
-    title: "First Blog Post",
-    summary:
-      "This is the summary of the first blog post. this blog covers all the concept of webrtc and either it is serverless or with server gonna be discussed in brief way",
-    url: "https://example.com/first-blog-post",
-    date: "2024-07-18",
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    summary: "This is the summary of the second blog post.",
-    url: "https://example.com/second-blog-post",
-    date: "2024-07-15",
-  },
 ];
 
 function Dashboard() {
@@ -58,10 +21,10 @@ function Dashboard() {
       <div className="md:flex justify-between">
         <div className="left-portion ">
           <div className=" h-48 py-4 text-[25px] md:text-[45px]">
-            <h1>👋,</h1>
-            <div className="name flex ">
+            <p className="emoji">👋</p>
+            <div className=" my-10 ml-4 md:ml-10 md:my-14 flex  space-x-2">
               <h1 className="">I{"'"}m</h1>
-              <h1 className="intro"> Roshan Kumar Patel</h1>
+              <h1 className="intro "> Roshan Kumar Patel</h1>
             </div>
           </div>
           <div className="recent-activities-container">

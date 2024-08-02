@@ -10,9 +10,10 @@ import Insta from "./image/Insta.png";
 import Github from "./image/Github.png";
 import Contact_info from "./data/profile.json";
 import Phone from "./image/Phone.png";
+
 const Img = Contact_info.filter((elem) => (elem.img = "./image/" + elem.img));
 
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function Main({ page }: any) {
   const [dropdown, setDropDown] = useState(false);
@@ -20,19 +21,11 @@ function Main({ page }: any) {
   const [scroll, setScroll] = useState(0);
   const router = useRouter();
   const [data, setData] = useState({});
-  // below code was create for the trail of api with postgres for data fetching
-  // const handleGet = () => {
-  //   setData(
-  //     fetch("/api")
-  //       .then((resonse) => {
-  //         return resonse.json();
-  //       })
-  //       .then((data) => {
-  //         console.log(data);
-  //         return data;
-  //       })
-  //   );
-  // };
+  useEffect(() => {
+    router.push("/dashboard");
+    setPath("dashboard");
+  }, []);
+
   const navigate = (e: any) => {
     router.push("/" + e.currentTarget.getAttribute("value").toLowerCase());
     setPath(e.currentTarget.getAttribute("value").toLowerCase());
@@ -177,8 +170,8 @@ function Main({ page }: any) {
           </div>
         </div>
 
-        <section className="pageComponent rounded-xl card-color relative md:w-[80%]">
-          <div className="content-container    m-8">{page}</div>
+        <section className="pageComponent rounded-xl card-color  relative md:w-[80%]">
+          <div className="content-container    md:m-8 m-4">{page}</div>
         </section>
       </div>
     </section>
