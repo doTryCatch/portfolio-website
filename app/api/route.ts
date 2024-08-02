@@ -33,19 +33,26 @@
 //   }
 // }
 // pages/api/example.js
-let prisma: any;
-if (!process.env.NEXT_PUBLIC_IS_VERCEL) {
+import { NextApiRequest, NextApiResponse } from "next";
+
+let prisma;
+if (process.env.NEXT_PUBLIC_IS_VERCEL !== "true") {
   const { PrismaClient } = require("@prisma/client");
   prisma = new PrismaClient();
 }
 
-export default async function handler(req: any, res: any) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (prisma) {
-    // Use Prisma if it's available
-    const data = await prisma.example.findMany();
-    res.status(200).json(data);
+    try {
+      const data = await prisma.example.findMany();
+      res.status(200).json(data);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch data" });
+    }
   } else {
-    // Handle the case when Prisma is not available
     res
       .status(200)
       .json({ message: "Prisma is not available in this environment" });
