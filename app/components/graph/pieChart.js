@@ -6,46 +6,41 @@ import { ResponsivePie } from "@nivo/pie";
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
-// you'll often use just a few of them.
+
 const data = [
   {
     id: "python",
     label: "python",
-    value: 471,
+    value: 20,
     color: "hsl(308, 70%, 50%)",
   },
+
   {
-    id: "c",
-    label: "c",
-    value: 10,
-    color: "hsl(111, 70%, 50%)",
-  },
-  {
-    id: "java",
-    label: "java",
-    value: 482,
+    id: "Javascript",
+    label: "Javascript",
+    value: 50,
     color: "hsl(310, 70%, 50%)",
   },
   {
-    id: "haskell",
-    label: "haskell",
-    value: 52,
-    color: "hsl(163, 70%, 50%)",
+    id: "Typescript",
+    label: "Ts",
+    value: 15,
+    color: "hsl(119, 70%, 50%)",
   },
   {
-    id: "go",
-    label: "go",
-    value: 221,
-    color: "hsl(116, 70%, 50%)",
+    id: "SQL",
+    label: "SQL",
+    value: 15,
+    color: "hsl(163, 90%, 50%)",
   },
 ];
 const MyResponsivePie = () => (
   <ResponsivePie
     data={data}
-    margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+    margin={{ top: 40, right: 70, bottom: 80, left: 80 }}
     innerRadius={0.5}
     padAngle={0.7}
-    cornerRadius={3}
+    cornerRadius={4}
     activeOuterRadiusOffset={8}
     borderWidth={1}
     borderColor={{
@@ -53,7 +48,7 @@ const MyResponsivePie = () => (
       modifiers: [["darker", 0.2]],
     }}
     arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor="silver"
+    arcLinkLabelsTextColor="#333"
     arcLinkLabelsThickness={2}
     arcLinkLabelsColor={{ from: "color" }}
     arcLabelsSkipAngle={10}
@@ -70,28 +65,29 @@ const MyResponsivePie = () => (
         size: 4,
         padding: 1,
         stagger: true,
-      },
-      {
-        id: "lines",
-        type: "patternLines",
-        background: "inherit",
-        color: "rgba(255, 255, 255, 0.3)",
-        rotation: -45,
-        lineWidth: 6,
-        spacing: 10,
+        effects: [
+          {
+            on: "hover",
+            style: {
+              itemTextColor: "#fff",
+              background: "#333",
+            },
+          },
+        ],
       },
     ]}
     fill={[
       {
         match: {
-          id: "ruby",
+          id: "Typescript",
         },
         id: "dots",
       },
       {
         match: {
-          id: "c",
+          id: "SQL",
         },
+
         id: "dots",
       },
       {
@@ -108,27 +104,9 @@ const MyResponsivePie = () => (
       },
       {
         match: {
-          id: "scala",
+          id: "Javascript",
         },
-        id: "lines",
-      },
-      {
-        match: {
-          id: "lisp",
-        },
-        id: "lines",
-      },
-      {
-        match: {
-          id: "elixir",
-        },
-        id: "lines",
-      },
-      {
-        match: {
-          id: "javascript",
-        },
-        id: "lines",
+        id: "dots",
       },
     ]}
     legends={[
@@ -139,7 +117,7 @@ const MyResponsivePie = () => (
         translateX: 0,
         translateY: 56,
         itemsSpacing: 0,
-        itemWidth: 100,
+        itemWidth: 80,
         itemHeight: 18,
         itemTextColor: "#999",
         itemDirection: "left-to-right",
@@ -150,7 +128,7 @@ const MyResponsivePie = () => (
           {
             on: "hover",
             style: {
-              itemTextColor: "#000",
+              itemTextColor: "#fff",
             },
           },
         ],

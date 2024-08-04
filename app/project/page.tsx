@@ -6,21 +6,16 @@ import Link from "next/link";
 function Porject() {
   return (
     <section className="project   ">
-      <div className="project-language-based-categories flex justify-between ">
-        <div className="header-part">
-          <h1> Projects </h1>{" "}
-          <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl">
-            {" "}
-          </div>{" "}
-        </div>{" "}
-        <div className="categories-options absolute right-0 top-0 color rounded-bl-xl rounded-tr-xl ">
-          <ul className="flex gap-5 mx-4 my-1 text-white">
-            <li> webApp </li> <li> c / c++ </li> <li> python </li>{" "}
-            <li> java </li>{" "}
-          </ul>{" "}
-        </div>{" "}
+      <div className="text-[30px]">
+        <h1> Projects </h1>{" "}
+        <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
       </div>{" "}
-      <div className="project-card-container grid md:grid-cols-3 grid-cols-1 grid-row-auto gap-10 my-10">
+      <div className="categories-options  color my-6">
+        <ul className="flex gap-5 mx-4 my-1 text-white">
+          <li> webApp </li> <li> c / c++ </li> <li> python </li> <li> java </li>{" "}
+        </ul>{" "}
+      </div>{" "}
+      <div className="project-card-container grid md:grid-cols-3 grid-cols-1 grid-row-auto gap-10 my-10 page-component">
         {Projects.map((project, key) => (
           <>
             <Link href={`/posts/${project.id}`}>
@@ -45,7 +40,7 @@ function Porject() {
                   {project.tags.map((tags, key) => {
                     return (
                       <>
-                        <span className="tech-tag text-sm">{tags}</span>
+                        <b className="tech-tag text-sm">{tags}</b>
                       </>
                     );
                   })}
@@ -54,8 +49,8 @@ function Porject() {
                   <time dateTime="1995-05-15" className=" center">
                     {project.post_date}
                   </time>
-                  <span>.</span>
-                  <span>{project.watch_time}</span>
+                  <b>.</b>
+                  <b>{project.watch_time}</b>
                 </div>{" "}
                 <div className="img-content m-2">
                   <div className=" relative  w-full h-[25vh] rounded-2xl overflow-hidden">

@@ -18,49 +18,49 @@ const blogs = [
 function Dashboard() {
   return (
     <>
-      <div className="md:flex justify-between">
-        <div className="left-portion ">
-          <div className=" h-48 py-4 text-[25px] md:text-[45px]">
-            <p className="emoji">👋</p>
-            <div className=" my-10 ml-4 md:ml-10 md:my-14 flex  space-x-2">
-              <h1 className="">I{"'"}m</h1>
-              <h1 className="intro "> Roshan Kumar Patel</h1>
+      <div className=" page-component">
+        <div className="body-area md:flex justify-between md:space-x-5 md:my-10">
+          <div className="left-portion  md:w-[60%]">
+            <div className=" h-60 py-4 text-[25px] md:text-[40px]">
+              <p className="emoji">👋</p>
+              <div className=" my-10 ml-4 md:ml-10 md:my-14 flex  space-x-2">
+                <h1 className="">I{"'"}m</h1>
+                <h1 className="intro "> Roshan Kumar Patel</h1>
+              </div>
             </div>
-          </div>
-          <div className="recent-activities-container">
-            <h1>Recent Activites</h1>
-            <div className="blogs-container my-2 blogs-card rounded-lg ">
-              <div className="blog-content p-2">
-                <span>Blogs</span>
-                {blogs.length === 0 ? (
-                  <p>No recent blog posts.</p>
-                ) : (
-                  <ul className="my-4 mx-2 space-y-4">
-                    {blogs.map((blog) => (
-                      <li key={blog.id}>
-                        <div className="heading flex justify-between text-[14px]">
-                          <h3 className=" ">{blog.title}</h3>
-                          <small className="text-gray-300">
-                            {new Date(blog.date).toDateString()}
-                          </small>
-                        </div>
+            <div className="recent-activities-container md:my-14">
+              <h1>Recent Activites</h1>
+              <div className="blogs-container my-2 blogs-card rounded-lg ">
+                <div className="blog-content p-2">
+                  <b>Blogs</b>
+                  {blogs.length === 0 ? (
+                    <p>No recent blog posts.</p>
+                  ) : (
+                    <ul className="my-4 mx-2 space-y-4">
+                      {blogs.map((blog) => (
+                        <li key={blog.id}>
+                          <div className="heading flex justify-between text-[14px]">
+                            <h3 className=" ">{blog.title}</h3>
+                            <small className="text-gray-300">
+                              {new Date(blog.date).toDateString()}
+                            </small>
+                          </div>
 
-                        <p className="text-[12px] text-gray-400 m-1">
-                          {blog.summary}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                          <p className="text-[12px] text-gray-400 m-1">
+                            {blog.summary}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="right-portion">
-          <h1>Statistics</h1>
-          <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"></div>
-          <div className="graph-container  h-[30vh] w-[30vh] ">
-            <MyResponsivePie />
+          <div className="right-portion md:w-[35%] my-10 ">
+            <div className="graph-container  md:h-[40vh] h-[30vh]   ">
+              <MyResponsivePie />
+            </div>
           </div>
         </div>
       </div>

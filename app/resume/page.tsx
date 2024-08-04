@@ -11,10 +11,12 @@ interface ResumeItem {
 
 const Portfolio = () => {
   return (
-    <div className="about font-sans font-medium space-y-4 ">
-      <h1 className="h1 text-[30px]"> Resume </h1>{" "}
-      <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
-      <div className="contnt text-gray-400   space-y-6">
+    <div className="about  space-y-10 ">
+      <div className="header">
+        <h1 className="h1 text-[30px]"> Resume </h1>{" "}
+        <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
+      </div>
+      <div className="contnt text-gray-400  space-y-6 page-component">
         {" "}
         {Object.keys(resume).map((val, index) => (
           <div className="resume-body " key={index}>

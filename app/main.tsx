@@ -37,57 +37,9 @@ function Main({ page }: any) {
   };
 
   return (
-    <section className="body w-[100%]">
-      <div className="navbar scroll-smooth  border-2 border-transparent md:sticky md:top-0 z-10 fixed -bottom-1  w-[100%] ">
-        <ul className="nav-list-items h-12 center bg-pink-600  gap-6 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-90 md:bg-opacity-100">
-          <li
-            onClick={navigate}
-            value="Dashboard"
-            className={
-              path === "dashboard"
-                ? "underline underline-offset-2"
-                : "no-underline"
-            }
-          >
-            Dashboard
-          </li>
-          <li
-            onClick={navigate}
-            value="resume"
-            className={
-              path === "resume"
-                ? "underline underline-offset-2"
-                : "no-underline"
-            }
-          >
-            Resume
-          </li>
-          <li
-            onClick={navigate}
-            value="Project"
-            className={
-              path === "project"
-                ? "underline underline-offset-2"
-                : "no-underline"
-            }
-          >
-            Projects
-          </li>
-          <li
-            onClick={navigate}
-            value="Contact"
-            className={
-              path === "contact"
-                ? "underline underline-offset-2"
-                : "no-underline"
-            }
-          >
-            Blogs
-          </li>
-        </ul>
-      </div>
-      <div className="main-content-area m-2  gap-8 md:m-5  md:flex">
-        <div className="profile-card h-fit   card-color rounded-xl  border-2 border-transparent  md:w-[20%] z-10 sticky md:top-10 top-0">
+    <section className="body">
+      <div className="main-content-area m-1  gap-8 md:m-10  md:flex space-y-4 md:space-y-0 ">
+        <div className="profile-card h-fit   card-color rounded-3xl  border-2 border-transparent  md:w-[22%] z-10 sticky md:top-10 top-0">
           <div className="card-content  md:block flex  m-4 space-x-5 md:space-x-0 ">
             <div className="profile-image center ">
               <div className="img h-[15vh]  md:h-[25vh] w-[15vh] md:w-[25vh] br_sd   bg-white rounded-3xl overflow-hidden">
@@ -170,8 +122,66 @@ function Main({ page }: any) {
           </div>
         </div>
 
-        <section className="pageComponent rounded-xl card-color  relative md:w-[80%]">
-          <div className="content-container    md:m-8 m-4">{page}</div>
+        <section className="pageComponent rounded-3xl card-color  relative md:w-[78%]">
+          <div className="project-language-based-categories center">
+            <div className="categories-options md:absolute md:right-0 md:top-0 color md:rounded-bl-xl md:rounded-tr-xl md:rounded-t-none rounded-t-xl z-10 fixed -bottom-1  md:h-14 md:w-auto w-full h-12">
+              <ul className="flex md:gap-10 gap-7 mx-4 my-1 text-white md:p-3 p-2">
+                <li
+                  onClick={navigate}
+                  value="Dashboard"
+                  className={
+                    path === "dashboard"
+                      ? "underline underline-offset-2"
+                      : "no-underline"
+                  }
+                >
+                  Dashboard
+                </li>
+                <li
+                  onClick={navigate}
+                  value="resume"
+                  className={
+                    path === "resume"
+                      ? "underline underline-offset-2"
+                      : "no-underline"
+                  }
+                >
+                  Resume
+                </li>
+                <li
+                  onClick={navigate}
+                  value="Project"
+                  className={
+                    path === "project"
+                      ? "underline underline-offset-2"
+                      : "no-underline"
+                  }
+                >
+                  Projects
+                </li>
+                <li
+                  onClick={navigate}
+                  value="Contact"
+                  className={
+                    path === "contact"
+                      ? "underline underline-offset-2"
+                      : "no-underline"
+                  }
+                >
+                  Blogs
+                </li>
+              </ul>{" "}
+            </div>{" "}
+          </div>{" "}
+          {/* <div className="navbar scroll-smooth  border-2 border-transparent md:sticky md:top-0 z-10 fixed -bottom-1  w-[100%]  "> */}
+          {/* <div className="navbar absolute right-0 top-0 color rounded-bl-xl rounded-tr-xl "> */}
+          {/* <ul className="nav-list-items h-12 center bg-pink-600  gap-6 md:text-[20px] text-[15px] md:mx-[24rem]  md:rounded-md rounded-t-md bg-opacity-90 md:bg-opacity-100">
+              
+            </ul>
+          </div> */}
+          <div className="content-container page-component   md:m-8 m-4 ">
+            {page}
+          </div>
         </section>
       </div>
     </section>
