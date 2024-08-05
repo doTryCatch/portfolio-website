@@ -125,13 +125,13 @@ function Main({ page }: any) {
         <section className="pageComponent rounded-3xl card-color  relative md:w-[78%]">
           <div className="project-language-based-categories center">
             <div className="categories-options md:absolute md:right-0 md:top-0 color md:rounded-bl-xl md:rounded-tr-xl md:rounded-t-none rounded-t-xl z-10 fixed -bottom-1  md:h-14 md:w-auto w-full h-12">
-              <ul className="flex md:gap-10 gap-7 mx-4 my-1 text-white md:p-3 p-2">
+              <ul className="flex md:gap-8 w-[70vh] gap-7 mx-4 my-1 text-white md:p-3 p-2 center">
                 <li
                   onClick={navigate}
                   value="Dashboard"
                   className={
                     path === "dashboard"
-                      ? "underline underline-offset-2"
+                      ? "underline underline-offset-4 text-yellow-500 decoration-red-400"
                       : "no-underline"
                   }
                 >
