@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 // import Comment from "../public/comment.svg";
-import Projects from "../data/projects.json";
+import Projects from "../../src/data/projects.json";
 import Link from "next/link";
 function Porject() {
   return (
@@ -10,10 +10,22 @@ function Porject() {
         <h1> Projects </h1>{" "}
         <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
       </div>{" "}
-      <div className="categories-options  color my-6">
+      <div className="categories-options flex justify-between  color my-6">
+        <div className="filterOption md:hidden">
+          <select name="project type" id="projectType">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <div className="dropDown-icon"></div>
+        </div>
         <ul className="flex gap-5 mx-4 my-1 text-white">
           <li> webApp </li> <li> c / c++ </li> <li> python </li> <li> java </li>{" "}
         </ul>{" "}
+        <div className="addProject-icon rounded-3xl border-slate-500 border center w-10">
+          <b className="text-[25px] text-slate-400">+</b>
+        </div>
       </div>{" "}
       <div className="project-card-container grid md:grid-cols-3 grid-cols-1 grid-row-auto gap-10 my-10 page-component">
         {Projects.map((project, key) => (

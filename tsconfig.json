@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/components/blog.js"
-  ],
+    "app/components/blog.js",
+    "src/components/graph/nivo.js"
+, "prisma/seed.js"  ],
   "exclude": ["node_modules"]
 }

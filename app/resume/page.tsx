@@ -1,8 +1,7 @@
 import React from "react";
-import resume from "../data/resume.json";
+import resume from "../../src/data/resume.json";
 import Image from "next/image";
-import Book from "../image/book.png";
-
+import Book from "../../public/image/book.png";
 interface ResumeItem {
   name: string;
   year: string;

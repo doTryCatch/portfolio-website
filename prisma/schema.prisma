@@ -11,18 +11,25 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 
 }
 
 model Project{
   id Int @id @default(autoincrement())
+  
+
   heading String
+ techstack Techstack[]
   time DateTime @default(now())
-  techstack Techstack[]
+  thumbnail Bytes
+  githubLinkUrl  String
+
+ 
 }
 model Techstack{
   id Int @id @default(autoincrement())
-  name String
+  usededTech String
   projectid Int
   project Project @relation(fields: [projectid],references: [id])
 }

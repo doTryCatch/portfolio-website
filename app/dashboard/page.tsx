@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import MyResponsiveBar from "../components/graph/barGraph";
-import MyResponsivePie from "../components/graph/pieChart";
-import Data from "../data/dashboard";
+import MyResponsiveBar from "../../src/components/graph/barGraph";
+import MyResponsivePie from "../../src/components/graph/pieChart";
+import Data from "../../src/data/dashboard";
 
 const blogs = [
   {

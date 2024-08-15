@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { FindAllData } from "../../prisma/seed";
 
 let prisma: any;
 if (process.env.NEXT_PUBLIC_IS_VERCEL !== "true") {
@@ -15,12 +16,7 @@ export async function GET() {
   }
 
   try {
-    const projects = await prisma.project.findMany({
-      include: {
-        techstack: true, // Include related techstack data
-      },
-    });
-    return NextResponse.json({ message: projects });
+    return NextResponse.json({ message: FindAllData() });
   } catch (error) {
     console.error("Error fetching projects:", error);
     return NextResponse.json(
