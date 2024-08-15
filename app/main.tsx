@@ -21,13 +21,13 @@ function Page({ page }: any) {
   useEffect(() => {
     router.push("/dashboard");
     setPath("dashboard");
-  }, []);
+  }, [router]);
 
   const navigate = (e: any) => {
     router.push("/" + e.currentTarget.getAttribute("value").toLowerCase());
     setPath(e.currentTarget.getAttribute("value").toLowerCase());
   };
-
+  var roshan;
   const handleClick = () => {
     setDropDown((prev) => !prev);
     console.log(dropdown);
