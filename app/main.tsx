@@ -168,7 +168,7 @@ function Page({ page }: any) {
                 </li>
                 <li
                   onClick={navigate}
-                  value="Contact"
+                  value="Blog"
                   className={
                     path === "contact"
                       ? "underline underline-offset-4 text-yellow-500 decoration-red-400"
