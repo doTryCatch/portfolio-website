@@ -1,15 +1,9 @@
-import React, { useState } from "react";
-
+import React, { ReactHTMLElement, useState } from "react";
+import { projectSchema } from "./formSchema/schema";
 const PostForm = () => {
-  const [formData, setFormData] = useState({
-    headline: "",
-    tags: "",
-    post_date: "",
-    thumbnail_url: "",
-    github_link: "",
-  });
+  const [formData, setFormData] = useState(projectSchema);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -17,9 +11,17 @@ const PostForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+  };
+  const handleListChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const newValue = value.split(",").map((value) => ({ name: value }));
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: newValue,
+    }));
   };
 
   return (
@@ -36,8 +38,8 @@ const PostForm = () => {
           <input
             type="text"
             id="headline"
-            name="headline"
-            value={formData.headline}
+            name="heading"
+            value={formData.heading}
             onChange={handleChange}
             className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter headline"
@@ -49,33 +51,15 @@ const PostForm = () => {
             htmlFor="tags"
             className="text-sm font-medium text-gray-700 mb-2"
           >
-            Tags (comma-separated)
+            Techstacks (comma-separated)
           </label>
           <input
             type="text"
             id="tags"
-            name="tags"
-            value={formData.tags}
-            onChange={handleChange}
+            name="techstack"
+            onChange={handleListChange}
             className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="e.g., #React, #JavaScript"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <label
-            htmlFor="post_date"
-            className="text-sm font-medium text-gray-700 mb-2"
-          >
-            Post Date
-          </label>
-          <input
-            type="date"
-            id="post_date"
-            name="post_date"
-            value={formData.post_date}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -84,13 +68,12 @@ const PostForm = () => {
             htmlFor="thumbnail_url"
             className="text-sm font-medium text-gray-700 mb-2"
           >
-            Thumbnail URL
+            Thumbnail UR
           </label>
           <input
-            type="url"
+            type="file"
             id="thumbnail_url"
             name="thumbnail_url"
-            value={formData.thumbnail_url}
             onChange={handleChange}
             className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter thumbnail URL"
@@ -107,8 +90,8 @@ const PostForm = () => {
           <input
             type="url"
             id="github_link"
-            name="github_link"
-            value={formData.github_link}
+            name="githubLinkUrl"
+            value={formData.githubLinkUrl}
             onChange={handleChange}
             className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter GitHub link"

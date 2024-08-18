@@ -16,11 +16,11 @@ datasource db {
 }
 
 model Project{
-  id Int @id @default(autoincrement())
+  id Int @id  @default(autoincrement())
   
 
   heading String
- techstack Techstack[]
+  techstack Techstack[]
   time DateTime @default(now())
   thumbnail Bytes
   githubLinkUrl  String
@@ -29,7 +29,7 @@ model Project{
 }
 model Techstack{
   id Int @id @default(autoincrement())
-  usededTech String
+  name String
   projectid Int
   project Project @relation(fields: [projectid],references: [id])
 }
