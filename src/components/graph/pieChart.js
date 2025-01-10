@@ -24,7 +24,7 @@ const data = [
   {
     id: "Typescript",
     label: "Ts",
-    value: 15,
+    value: 120,
     color: "hsl(119, 70%, 50%)",
   },
   {
@@ -33,14 +33,20 @@ const data = [
     value: 15,
     color: "hsl(163, 90%, 50%)",
   },
+  {
+    id: "SQL2",
+    label: "SQL2",
+    value: 55,
+    color: "hsl(163, 90%, 50%)",
+  },
 ];
 const MyResponsivePie = () => (
   <ResponsivePie
     data={data}
-    margin={{ top: 40, right: 70, bottom: 80, left: 80 }}
-    innerRadius={0.5}
+    margin={{ top: 40, right: 20, bottom: 80, left: 20 }}
+    innerRadius={0.45}
     padAngle={0.7}
-    cornerRadius={4}
+    cornerRadius={5}
     activeOuterRadiusOffset={8}
     borderWidth={1}
     borderColor={{
@@ -48,7 +54,7 @@ const MyResponsivePie = () => (
       modifiers: [["darker", 0.2]],
     }}
     arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor="#333"
+    arcLinkLabelsTextColor="#fff "
     arcLinkLabelsThickness={2}
     arcLinkLabelsColor={{ from: "color" }}
     arcLabelsSkipAngle={10}
@@ -109,31 +115,31 @@ const MyResponsivePie = () => (
         id: "dots",
       },
     ]}
-    legends={[
-      {
-        anchor: "bottom",
-        direction: "row",
-        justify: false,
-        translateX: 0,
-        translateY: 56,
-        itemsSpacing: 0,
-        itemWidth: 80,
-        itemHeight: 18,
-        itemTextColor: "#999",
-        itemDirection: "left-to-right",
-        itemOpacity: 1,
-        symbolSize: 18,
-        symbolShape: "circle",
-        effects: [
-          {
-            on: "hover",
-            style: {
-              itemTextColor: "#fff",
-            },
-          },
-        ],
-      },
-    ]}
+    // legends={[
+    //   {
+    //     anchor: "bottom",
+    //     direction: "row",
+    //     justify: false,
+    //     translateX: 0,
+    //     translateY: 56,
+    //     itemsSpacing: 0,
+    //     itemWidth: 80,
+    //     itemHeight: 18,
+    //     itemTextColor: "#999",
+    //     itemDirection: "left-to-right",
+    //     itemOpacity: 1,
+    //     symbolSize: 18,
+    //     symbolShape: "circle",
+    //     effects: [
+    //       {
+    //         on: "hover",
+    //         style: {
+    //           itemTextColor: "#fff",
+    //         },
+    //       },
+    //     ],
+    //   },
+    // ]}
   />
 );
 export default MyResponsivePie;

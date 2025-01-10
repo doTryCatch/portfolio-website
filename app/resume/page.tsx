@@ -10,7 +10,7 @@ interface ResumeItem {
 
 const Portfolio = () => {
   return (
-    <div className="about  space-y-10 ">
+    <div className="about page-component-animation  space-y-10 ">
       <div className="header">
         <h1 className="h1 text-[30px]"> Resume </h1>{" "}
         <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}

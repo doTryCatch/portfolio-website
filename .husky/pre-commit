@@ -1,4 +1,6 @@
+
 npx  eslint .
+
 echo "validation eslint and prettier"
 npx eslint . || {
     echo echo "❌ ESLint failed. Please fix the errors and try again."

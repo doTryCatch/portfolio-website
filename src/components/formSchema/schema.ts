@@ -1,17 +1,26 @@
-type projectSchemaType = {
-  heading: string;
-  techstack: { name: string }[];
-  thumbnail: File | null;
-  githubLinkUrl: string;
-};
+interface Techstack {
+  create: { name: string }[];
+}
 
-const projectSchema: projectSchemaType = {
+interface FormData {
+  heading: string;
+  description: string;
+  techstack: Techstack;
+  time: string;
+  // thumbnail: Buffer | null; // Correctly typed as a File instance or null
+  githubLinkUrl: string;
+}
+
+// Initialize state with correct typing
+const projectSchema: FormData = {
   heading: "",
-  techstack: [], // Array of tech stack
-  thumbnail: null, // Thumbnail will be a File object
+  description: "",
+  techstack: {
+    create: [{ name: "" }], // Initial tech stack with an empty object
+  },
+  time: new Date().toISOString(),
+  // thumbnail: null, // Initialize as null
   githubLinkUrl: "",
 };
-
-type blogSchemaType = {};
 
 export { projectSchema };

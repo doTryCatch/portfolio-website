@@ -20,9 +20,10 @@ model Project{
   
 
   heading String
+  description String
   techstack Techstack[]
   time DateTime @default(now())
-  thumbnail Bytes
+
   githubLinkUrl  String
 
  

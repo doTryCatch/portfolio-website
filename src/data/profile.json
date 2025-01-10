@@ -1,21 +1,17 @@
-[{
+[
+    {
         "heading": "Email",
-        "value": "richard@example.com",
-        "img": "Email.png"
+        "value": "rp207045@gmail.com"
+
     },
     {
         "heading": "Phone",
-        "value": "+1 (213) 352-2795",
-        "img": "Phone.png"
-    },
-    {
-        "heading": "Birthday",
-        "value": "June 23, 1982",
-        "img": "Birth_date.png"
-    },
-    {
-        "heading": "Location",
-        "value": "Sacramento, California, USA",
-        "img": "Location.png"
+        "value": "+91 8539014511"
     }
-]
+,{
+        "heading": "Location_on",
+        "value": "Pooja Layout, Nagpur, Digdoh, Maharashtra 440016",
+        "link":"https://maps.app.goo.gl/Zko8Eejd7SFy3RZk8"
+    }
+
+ ]
