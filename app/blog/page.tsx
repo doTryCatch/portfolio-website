@@ -4,8 +4,6 @@ import Blogs from "../../src/data/blog.json"; // Assume this is a JSON file with
 import Link from "next/link";
 import DropDown from "../../public/image/dropdown.png";
 
-import { useAuth } from "@/src/hooks/authProvider";
-import BlogEntryUi from "@/src/components/Form";
 import { useState } from "react";
 
 function BlogPage() {
@@ -13,7 +11,6 @@ function BlogPage() {
     const [currentCategory, setCategory] = useState("all");
 
     const handleClick = () => setDropDown((prev) => !prev);
-    const addBlog = () => setAddBlog((prev) => !prev);
     const filterCategory = (category: string) => setCategory(category);
 
     return (

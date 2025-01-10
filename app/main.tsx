@@ -8,8 +8,6 @@ import DropDown from "../public/image/dropdown.png";
 // import Insta from "../public/image/Insta.png";
 // import Github from "../public/image/Github.png";
 import Contact_info from "../src/data/profile.json";
-import Phone from "../public/image/Phone.png";
-import { MyContext, AuthProvider } from "@/src/hooks/authProvider";
 const navItems = [
     { name: "Dashboard" },
     { name: "resume" },
@@ -33,7 +31,6 @@ function Page({ page }: any) {
         router.push("/" + e.currentTarget.getAttribute("value").toLowerCase());
         setPath(e.currentTarget.getAttribute("value").toLowerCase());
     };
-    var roshan;
     const handleClick = () => {
         setDropDown((prev) => !prev);
         console.log(dropdown);

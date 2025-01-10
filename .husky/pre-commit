@@ -1,10 +1,7 @@
-
-npx  eslint .
-
-echo "validation eslint and prettier"
-npx eslint . || {
-    echo echo "❌ ESLint failed. Please fix the errors and try again."
-
-exit 1
+echo "🛠️ Running ESLint validation..."
+npx eslint . --ext .js,.jsx,.ts,.tsx || {
+    echo "❌ ESLint validation failed. Fix the errors and try again."
+    exit 1
 }
-echo "everthing is ok. no restriction for commit. ready to commit!!!"
+
+echo "✅ Validation passed! Ready to commit."
