@@ -19,7 +19,6 @@
     "@nivo/bar": "^0.87.0",
     "@nivo/geo": "^0.87.0",
     "@nivo/pie": "^0.87.0",
-    "@prisma/client": "^6.0.1",
     "@types/mdx": "^2.0.13",
     "axios": "^1.7.4",
     "markdown": "^0.5.0",
