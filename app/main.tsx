@@ -8,7 +8,7 @@ import DropDown from "../public/image/dropdown.png";
 // import Insta from "../public/image/Insta.png";
 // import Github from "../public/image/Github.png";
 import Contact_info from "../src/data/profile.json";
-import Contact from "./components/contact.tsx";
+import Contact from "./components/contact";
 const navItems = [
   { name: "Dashboard" },
   { name: "resume" },

@@ -4,7 +4,7 @@ import fs from "fs";
 
 import path from "path";
 
-import { markdownToHtml } from "../../../lib/markdown.ts";
+import { markdownToHtml } from "../../../lib/markdown";
 
 const PostPage = async () => {
   const filePath = path.join(process.cwd(), "app", "content", "example.mdx"); // Path to markdown file

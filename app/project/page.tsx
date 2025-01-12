@@ -18,7 +18,7 @@ function Project() {
           project.category.includes(filter)
         );
 
-  const handleFilterChange = (value) => {
+  const handleFilterChange = (value:string) => {
     setFilter(value);
     setDropDown(false);
   };
