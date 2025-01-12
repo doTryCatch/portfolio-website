@@ -1,47 +1,52 @@
-[
-  {
-    "id": "1",
-    "icon_url": "",
-    "title": "Debugging Complex Bugs in Production",
-    "tags": ["Bugs", "Debugging", "Production"],
-    "post_date": "2024-08-01",
-    "read_time": "5 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
-  },
-  {
-    "id": "2",
-    "icon_url": "",
-    "title": "Choosing the Right Tech Stack for Web Development",
-    "tags": ["Tech Stack", "Web Development", "JavaScript"],
-    "post_date": "2024-07-28",
-    "read_time": "8 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
-  },
-  {
-    "id": "3",
-    "icon_url": "",
-    "title": "2024 Roadmap for Full-Stack Developers",
-    "tags": ["Tech Roadmaps", "Full-Stack", "Career"],
-    "post_date": "2024-08-10",
-    "read_time": "10 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
-  },
-  {
-    "id": "4",
-    "icon_url": "",
-    "title": "Introduction to Cyber Security for Developers",
-    "tags": ["Security", "Cybersecurity", "Best Practices"],
-    "post_date": "2024-08-05",
-    "read_time": "6 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
-  },
-  {
-    "id": "5",
-    "icon_url": "",
-    "title": "DevOps Essentials: Tools and Best Practices",
-    "tags": ["DevOps", "CI/CD", "Automation"],
-    "post_date": "2024-07-20",
-    "read_time": "7 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
-  }
-]
+[
+  {
+    "id": "1",
+    "icon_url": "",
+    "title": "Debugging Complex Bugs in Production",
+    "tags": ["Bugs", "Debugging", "Production"],
+    "category": "Bugs",
+    "post_date": "2024-08-01",
+    "read_time": "5 min read",
+    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": "2",
+    "icon_url": "",
+    "title": "Choosing the Right Tech Stack for Web Development",
+    "tags": ["Tech Stack", "Web Development", "JavaScript"],
+    "category": "Tech Stack",
+    "post_date": "2024-07-28",
+    "read_time": "8 min read",
+    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": "3",
+    "icon_url": "",
+    "title": "2024 Roadmap for Full-Stack Developers",
+    "tags": ["Tech Roadmaps", "Full-Stack", "Career"],
+    "category": "Tech Roadmaps",
+    "post_date": "2024-08-10",
+    "read_time": "10 min read",
+    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": "4",
+    "icon_url": "",
+    "title": "Introduction to Cyber Security for Developers",
+    "tags": ["Security", "Cybersecurity", "Best Practices"],
+    "category": "Security",
+    "post_date": "2024-08-05",
+    "read_time": "6 min read",
+    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": "5",
+    "icon_url": "",
+    "title": "DevOps Essentials: Tools and Best Practices",
+    "tags": ["DevOps", "CI/CD", "Automation"],
+    "category": "DevOps",
+    "post_date": "2024-07-20",
+    "read_time": "7 min read",
+    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+  }
+]

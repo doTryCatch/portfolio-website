@@ -15,7 +15,7 @@ const Portfolio = () => {
         <h1 className="h1 text-[30px]"> Resume </h1>{" "}
         <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
       </div>
-      <div className="contnt text-gray-400  space-y-6 page-component">
+      <div className="contnt text-gray-400 md:grid md:grid-cols-2  gap-6   space-y-6 page-component">
         {" "}
         {Object.keys(resume).map((val, index) => (
           <div className="resume-body " key={index}>
@@ -41,7 +41,7 @@ const Portfolio = () => {
                       <h2> {elem.year} </h2> <p> {elem.description} </p>{" "}
                     </div>{" "}
                   </li>
-                )
+                ),
               )}{" "}
             </ol>{" "}
           </div>

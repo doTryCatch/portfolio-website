@@ -5,15 +5,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* styles/globals.css */
+@import 'highlight.js/styles/github-dark.css';
 * {
   padding: 0;
   margin: 0;
 }
+:root {
+  --jet: hsl(0, 0%, 22%);
+}
+
+.outline-jet {
+  background-color: var(--jet);
+}
+/* Custom hover box-shadow */
+.hover\:custom-shadow:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
 
 body {
   /* background: rgb(12, 12, 12); */
   background-color: rgb(5, 5, 5);
-  font-family: "Poppins", sans-serif;
+  font-family:"latin",  sans-serif;
   height: 100%;
   font-size: medium;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +36,20 @@ body {
 b {
   color: white;
 }
+.bubble {
+position: absolute;
 
+border-top-left-radius: 80%;
+border-top-right-radius: 80%;
+border-right:inset 10px;
+
+border-bottom-left-radius: 100%;
+border-bottom-right-radius: 15px;
+}
+.resume-body{
+    display:grid;
+    grid-auto-rows:max-content;
+}
 .intro {
   font-weight: bold;
   /* background: linear-gradient(60deg, rgb(210, 5, 56), silver, white); */
@@ -46,7 +72,7 @@ b {
 
 }
 
-.contact-info-animation{
+.vslide,.contact-info-animation{
     overflow-y:hidden;
 animation:vertical_slide .3s;
 
@@ -85,7 +111,10 @@ animation:vertical_slide .3s;
   }
 }
 .projectCategory:hover {
+transition: .1s ease-in-out;
   color: rgb(234, 179, 8, 1);
+  
+
 }
 
 .text-size-1 {
@@ -97,6 +126,7 @@ h2,
 h3 {
   color: white;
 }
+
 
 
 .color {
@@ -212,23 +242,6 @@ p {
   animation: HI 1s infinite;
   /* animation-direction: alternate-reverse; */
 }
-
-.select-projectCategory {
-  animation: projectCategoryCard 1s ease-in-out;
-}
-
-@keyframes projectCategoryCard {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 50%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
 @keyframes HI {
   0%,
   100% {
@@ -263,7 +276,7 @@ p {
 }
 
 .popup,.page-component-animation {
-  animation: popUp 1s ease-in-out;
+  animation: popUp .3s ease-in-out;
 }
 
 .underliner {
@@ -272,6 +285,17 @@ p {
     border-radius: 20px;
     animation: linear-slide 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smoother cubic-bezier for more fluidity */
 }
+.fadeOut{
+    animation:fadeOut .25s ease-in-out;
+}
+@keyframes fadeOut {
+  0% {
+      transform:scale(0);
+  }
+  100% {
+      transform:scale(1);
+  }
+}
 @keyframes slide {
 
   0% {
