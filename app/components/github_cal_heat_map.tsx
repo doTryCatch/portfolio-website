@@ -3,10 +3,7 @@ import axios from "axios";
 import * as CalHeatmap from "cal-heatmap";  // Use * import if it's not default
 import "cal-heatmap/cal-heatmap.css";
 
-<<<<<<< HEAD
 const token = "";
-=======
->>>>>>> a5f0683 (fixed:github rule voilation error)
 const username = "doTryCatch";
 
 const GithubStat: React.FC = () => {
