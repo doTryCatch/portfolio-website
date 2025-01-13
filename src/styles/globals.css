@@ -7,6 +7,8 @@
 @tailwind utilities;
 /* styles/globals.css */
 @import 'highlight.js/styles/github-dark.css';
+/* In styles.css or globals.css */
+@import 'cal-heatmap/cal-heatmap.css';
 * {
   padding: 0;
   margin: 0;
@@ -36,6 +38,24 @@ body {
 b {
   color: white;
 }
+
+
+.slick-dots li.slick-active button:before {
+  color: white !important; /* Active dot color */
+}
+
+.slick-list {
+  overflow: hidden; /* Hides content outside the slider */
+}
+
+.slick-dots li button {
+  color: white !important; /* Style dots if needed */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white; /* Style navigation arrows */
+}
 .bubble {
 position: absolute;
 
@@ -45,6 +65,13 @@ border-right:inset 10px;
 
 border-bottom-left-radius: 100%;
 border-bottom-right-radius: 15px;
+}
+@media screen and (max-width: 600px) {
+    .bubble{
+        border-top-right-radius:30%;
+        border-top-left-radius:30%;
+        border-bottom-left-radius:10%;
+    }
 }
 .resume-body{
     display:grid;

@@ -24,19 +24,6 @@ function BlogPage() {
       </div>
 
       <div className={`select-blogCategory my-6 rounded-xl`}>
-        <div className="p-2 select-area flex justify-between text-slate-300 md:hidden">
-          <button>All</button>
-
-          <div className={`icon ${dropDown ? "rotate-180" : "rotate-0"}`}>
-            <Image
-              src={DropDown}
-              alt="Dropdown Icon"
-              height={30}
-              width={30}
-              onClick={handleClick}
-            />
-          </div>
-        </div>
 
         <div
           className={`md:flex blogOptions ${

@@ -37,7 +37,7 @@ function Project() {
         }`}
       >
         <div className="p-2 select-area flex justify-between text-slate-300 md:hidden">
-          <button>Select Category</button>
+          <button>{filter}</button>
           <div className={`icon ${dropDown ? "rotate-180" : "rotate-0"}`}>
             <Image
               src={DropDown}
@@ -76,7 +76,7 @@ function Project() {
       <div className="project-card-container  grid md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-14 my-10">
         {filteredProjects.map((project) => (
           <div
-            className="project-card  fadeOut bg-black    w-full rounded-2xl  h-auto"
+            className="project-card  fadeOut bg-black       w-full rounded-2xl  h-auto"
             key={project.id}
           >
             <Link href={`/posts/${project.id}`}>
@@ -92,7 +92,7 @@ function Project() {
                   />
                 </div>
               </div>
-              <div className="content-area m-2 ">
+              <div className="content-area m-2 space-y-2 ">
                 <time
                   dateTime={project.post_date}
                   className="text-slate-300 text-[10px] flex justify-end mb-2"
@@ -100,7 +100,7 @@ function Project() {
                   {project.post_date}
                 </time>
 
-                <div className="headline h-20">
+                <div className="headline max-h-20">
                   <h1>
                     <p className="line-clamp-3">{project.headline}</p>
                   </h1>

@@ -24,13 +24,12 @@ function Page({ page }: any) {
 
   const router = useRouter();
   // seting dashboard as landing page
-  useEffect(() => {
-    router.push("/dashboard");
-    setPath("dashboard");
-  }, [router]);
+ 
 
   const navigate = (e: any) => {
-    router.push("/" + e.currentTarget.getAttribute("value").toLowerCase());
+      let path= e.currentTarget.getAttribute("value").toLowerCase();
+      if(path=="dashboard") path=""
+    router.push("/" + path);
     setPath(e.currentTarget.getAttribute("value").toLowerCase());
   };
   const handleClick = () => {
@@ -48,8 +47,8 @@ function Page({ page }: any) {
       >
       <h1 className=" font-bold">Contact me</h1>
       </div>
-      <div className="profile-container m-1 gap-8 md:m-10 md:flex  md:space-y-0 space-y-4">
-        <div className="md:w-[22%] z-10 sticky md:top-10 top-0 h-fit ">
+      <div className="profile-container mx-1 gap-8 md:m-10 md:flex  md:space-y-0 space-y-4">
+        <div className="md:w-[22%] z-10 sticky md:top-10 top-0 bg-black h-fit">
           <div className="profile-card profile-card-animation  rounded-3xl border-2 border-transparent bg-black ">
             <div className="profile-card-content  flex md:block md:mx-4  md:my-10 md:space-x-0 space-x-5">
               <div className="profile-image-container center">
