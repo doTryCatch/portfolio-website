@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import frontend from "../../public/image/frontend.png";
+import TechStack from "../components/tech_stack"
 
 const blogs = [
   {
@@ -35,6 +36,7 @@ function Dashboard() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows:false
   };
 
   return (
@@ -57,18 +59,21 @@ function Dashboard() {
             </div>
           </div>
 
-          <section className="middle center my-10">
-            <div className="content-wrapper md:w-[90%] mx-auto">
+          <section className="middle center my-5 ">
+            <div className="content-wrapper md:w-[90%]  w-full mx-auto">
               <div className="recent-activities-container ">
-                <h1 className="text-xl font-bold mb-4">Recent Activities</h1>
-                <div className="blogs-container my-2 blogs-card rounded-lg p-4 bg-gray-800">
-                  <b className="text-lg text-white">Blogs</b>
+              <div className="heading mb-4">
+                <h1 className="text-lg font-bold ">Recent Activities</h1>
+
+        <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
+        </div>
+                <div className="blogs-container md:mx-32 md:w-[80%] rounded-lg p-4 ">
                   {blogs.length === 0 ? (
                     <p className="text-gray-400 mt-2">No recent blog posts.</p>
                   ) : (
-                    <Slider className="text-white mt-4" {...settings}>
+                    <Slider className="text-white md:mt-4  " {...settings}>
                       {blogs.map((blog) => (
-                        <div key={blog.id} className="">
+                        <div key={blog.id} className="space-x-5">
                           <div className="blog-card bg-gray-900 p-4 rounded-lg">
                             <div className="heading flex justify-between text-sm">
                               <h3 className="font-semibold">{blog.title}</h3>
@@ -86,22 +91,7 @@ function Dashboard() {
                   )}
                 </div>
               </div>
-
-              <div className="techStacks w-[50%] mt-10">
-                <div className="frontend bg-gray-800 p-4 rounded-lg">
-                  <div className="header flex items-center space-x-5">
-                    <Image
-                      src={frontend}
-                      width={50}
-                      height={50}
-                      alt="Frontend Stack"
-                    />
-                    <h1 className="text-lg font-bold text-white">Frontend</h1>
-                  </div>
-                </div>
-                <div className="backend mt-5"></div>
-                <div className="framework mt-5"></div>
-              </div>
+              <TechStack/>
             </div>
           </section>
         </div>

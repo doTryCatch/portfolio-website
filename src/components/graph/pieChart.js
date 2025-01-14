@@ -24,19 +24,19 @@ const data = [
   {
     id: "Typescript",
     label: "Ts",
-    value: 120,
+    value: 10,
     color: "hsl(119, 70%, 50%)",
   },
   {
-    id: "SQL",
-    label: "SQL",
-    value: 15,
+    id: "HTML",
+    label: "HTML",
+    value: 10,
     color: "hsl(163, 90%, 50%)",
   },
   {
-    id: "SQL2",
-    label: "SQL2",
-    value: 55,
+    id: "CSS",
+    label: "CSS",
+    value: 10,
     color: "hsl(163, 90%, 50%)",
   },
 ];

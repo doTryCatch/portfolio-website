@@ -27,6 +27,7 @@ function Project() {
     <section className="project popup">
       <div className="text-[30px]">
         <h1>Projects</h1>
+
         <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
       </div>
 
