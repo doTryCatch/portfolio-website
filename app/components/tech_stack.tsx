@@ -83,8 +83,8 @@ type SkillIconProps = {
 const SkillCard: React.FC<SkillCardProps> = ({ category, skills }) => (
   <div className="mb-8">
     <h3 className="text-md font-semibold text-slate-500 mb-4">{category}</h3>
-    <div className="flex flex-wrap bg-gradient-to-br from-[hsl(240,1%,25%)] to-[hsl(0,0%,46%)] space-x-6 py-4 rounded-lg">
-      {skills.map((skill) => (
+   <div className="flex flex-wrap bg-gradient-to-br from-[hsl(0,0%,35%)] to-[hsl(305,0%,2%)] space-x-6 py-4 rounded-lg">
+     {skills.map((skill) => (
         <SkillIcon key={skill} skill={skill} />
       ))}
     </div>

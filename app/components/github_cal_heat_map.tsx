@@ -1,34 +1,35 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import * as CalHeatmap from "cal-heatmap";  // Use * import if it's not default
-import "cal-heatmap/cal-heatmap.css";
+import HeatMap from "@rp-raone/cal-heatmap"
+
 
-const token = "";
+// Your GitHub token and username
+const token = process.env.NEXT_PUBLIC_GITHUB_SECRET_KEY;
 const username = "doTryCatch";
-
 const GithubStat: React.FC = () => {
+
   const [stats, setStats] = useState<Record<string, number> | null>(null);
-  const heatmapRef = useRef<HTMLDivElement | null>(null);
 
+  // Fetching GitHub contributions
   useEffect(() => {
     const fetchGitHubContributions = async () => {
       const query = `
         query($username: String!) {
           user(login: $username) {
-            contributionsCollection {
+              contributionsCollection {
               contributionCalendar {
-                weeks {
+                  weeks {
                   contributionDays {
-                    date
+                        date
                     contributionCount
                   }
-                }
+                  }
               }
-            }
+              }
           }
-        }
+            }
       `;
-
+            
       try {
         const response = await axios.post(
           "https://api.github.com/graphql",
@@ -53,38 +54,26 @@ const GithubStat: React.FC = () => {
     fetchGitHubContributions();
   }, []);
 
-  useEffect(() => {
-    if (stats && heatmapRef.current) {
-      const cal =  new (CalHeatmap as any)();  // Using constructor directly
-
-      cal.paint({
-        itemSelector: heatmapRef.current,
-        domain: { type: "month", label: { position: "top" } },
-        subDomain: { type: "day", label: false },
-        range: 12,
-        data: stats,
-        scale: {
-          color: {
-            type: "linear",
-            domain: [0, 5, 10, 20],
-            range: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
-          },
-        },
-        legend: [0, 5, 10, 15, 20],
-        tooltip: {
-          enabled: true,
-          formatter: (date:Date, value:number) => `${date.toDateString()}: ${value || 0} contributions`,
-        },
-      });
-    }
-  }, [stats]);
+  // Rendering the heatmap
 
   return (
-    <div>
-      <h1>GitHub Contribution Heatmap</h1>
-      <div ref={heatmapRef} id="heatmap" style={{ height: "200px" }}></div>
-    </div>
+          <div className="text-white card-color p-4 rounded-sm overflow-x-scroll">
+
+          {stats && <HeatMap 
+  data={stats}
+  year={2024}
+ />}
+          </div>
+   
   );
 };
 
-export default GithubStat;
+export default GithubStat;
+    
+
+
+ 
+        
+
+
+ 

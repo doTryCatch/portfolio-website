@@ -91,6 +91,7 @@ function Dashboard() {
                   )}
                 </div>
               </div>
+<GithubStat/>
               <TechStack/>
             </div>
           </section>

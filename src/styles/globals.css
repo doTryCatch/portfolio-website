@@ -34,7 +34,36 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+  height: 6px; /* Thin horizontal scrollbar */
+}
+
+/* Customize the track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #333; /* Grayish-black track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Customize the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #555; /* Slightly lighter gray thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Customize the thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Lighter gray thumb on hover */
+}
+.box:hover::before{
+    content:"hi";
+    position:absolute;
+    margin-top:-25px;
 
+
+
+}
 b {
   color: white;
 }
