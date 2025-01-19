@@ -71,7 +71,7 @@ function Dashboard() {
   <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
         </div>
 
-                      <div className="blogs-container md:mx-32 md:w-[75%] w-[90%] rounded-lg p-4 ">
+                      <div className="blogs-container md:mx-32 md:w-[75%]  rounded-lg p-4 ">
                   {blogs.length === 0 ? (
                     <p className="text-gray-400 mt-2">No recent blog posts.</p>
                   ) : (
