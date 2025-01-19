@@ -56,14 +56,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #777; /* Lighter gray thumb on hover */
 }
-.box:hover::before{
-    content:"hi";
-    position:absolute;
-    margin-top:-25px;
 
-
-
-}
 b {
   color: white;
 }

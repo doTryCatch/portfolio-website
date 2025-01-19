@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import frontend from "../../public/image/frontend.png";
 import TechStack from "../components/tech_stack"
+
 
 const blogs = [
   {
@@ -36,11 +37,13 @@ function Dashboard() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows:false
+    arrows:false,
+    autoplaySpeed:2500,
+    autoplay:true
   };
 
   return (
-    <>
+
       <div className="page-component-animation">
         <div className="body-area md:my-10">
           <div className="left-portion flex md:flex-row flex-col justify-between md:space-x-10 space-y-10">
@@ -52,22 +55,23 @@ function Dashboard() {
               </div>
             </div>
             <div className="pie-chart-container md:w-[40%] w-full md:my-10">
-              <div className="pie-chart md:h-[40vh] h-[35vh]">
+              <div className="pie-chart md:h-[40vh] md:my-10 h-[35vh]">
                 <MyResponsivePie />
                 <p className="relative ml-[48%] -mt-[48%] text-white">%</p>
               </div>
             </div>
           </div>
 
-          <section className="middle center my-5 ">
+          <section className="middle center  ">
             <div className="content-wrapper md:w-[90%]  w-full mx-auto">
               <div className="recent-activities-container ">
               <div className="heading mb-4">
-                <h1 className="text-lg font-bold ">Recent Activities</h1>
 
-        <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
+                <h1 className="text-lg font-bold ">Recent Activities</h1>
+  <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
         </div>
-                <div className="blogs-container md:mx-32 md:w-[80%] rounded-lg p-4 ">
+
+                      <div className="blogs-container md:mx-32 md:w-[75%] w-[90%] rounded-lg p-4 ">
                   {blogs.length === 0 ? (
                     <p className="text-gray-400 mt-2">No recent blog posts.</p>
                   ) : (
@@ -91,13 +95,21 @@ function Dashboard() {
                   )}
                 </div>
               </div>
+         
+              <div className="heat-map  my-20">
+
+                <h1 className="text-lg font-bold ">My Work proof</h1>
+               <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
+
 <GithubStat/>
+              </div>
+
               <TechStack/>
             </div>
           </section>
         </div>
       </div>
-    </>
+
   );
 }
 
