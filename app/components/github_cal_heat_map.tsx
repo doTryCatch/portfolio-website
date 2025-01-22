@@ -46,7 +46,7 @@ const GithubStat: React.FC = () => {
         });
 
         setStats(contributions);
-      } catch (error) {
+      } catch (error:any) {
         console.error("Error fetching GitHub contributions:", error);
       }
     };

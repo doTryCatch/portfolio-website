@@ -11,9 +11,19 @@ interface ResumeItem {
 const Portfolio = () => {
   return (
     <div className="about page-component-animation  space-y-10 ">
-      <div className="header">
+      <div className="header flex md:gap-20 justify-between ">
+      <div className="title">
         <h1 className="h1 text-[30px]"> Resume </h1>{" "}
         <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}
+
+      </div>
+      <a href="/files/resume.docx" download="resume.docx">
+
+      <span className="center material-symbols-outlined text-green-500 text-[35px] hover:scale-110 cursor-pointer ease-in-out">
+download
+</span>
+      </a>
+
       </div>
       <div className="contnt text-gray-400 md:grid md:grid-cols-2  gap-6   space-y-6 page-component">
         {" "}

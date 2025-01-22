@@ -29,6 +29,7 @@
     "@types/mdx": "^2.0.13",
     "axios": "^1.7.9",
     "cal-heatmap": "^4.2.4",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "markdown": "^0.5.0",
