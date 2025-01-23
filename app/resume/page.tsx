@@ -11,7 +11,7 @@ interface ResumeItem {
 const Portfolio = () => {
   return (
     <div className="about page-component-animation  space-y-10 ">
-      <div className="header flex md:gap-20 justify-between ">
+      <div className="header flex md:gap-20 md:justify-start items-center justify-between ">
       <div className="title">
         <h1 className="h1 text-[30px]"> Resume </h1>{" "}
         <div className="yellow-line h-1 w-10 bg-yellow-500  rounded-3xl"> </div>{" "}

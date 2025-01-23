@@ -1,12 +1,11 @@
 [
   {
     "id": 1,
-    "icon_url": "https://th.bing.com/th/id/OIP.X1i3VJ_sE-H2Ha8LRYv0HgHaHa?pid=ImgDet&rs=1",
-    "headline": "Mastering Game Development with Unity",
-    "tags": ["#Unity", "#GameDev", "#tutorial"],
+    "url": "https://github.com/doTryCatch/Fire-Mario-Game",
+    "headline": "A 2d game based on pygame which have similar functionality like mario but addition with gun firing along with boom barding. check it out...",
+    "tags": ["#Pygame", "#Python"],
     "post_date": "2023-08-20",
-    "watch_time": "watch 20m time",
-    "thumbnail_url": "https://codewithsadee.github.io/vcard-personal-portfolio/assets/images/project-2.png",
+    "thumbnail_url": "firemario",
     "statistics": {
       "stars": 200,
       "comments": 30,
@@ -16,137 +15,60 @@
   },
   {
     "id": 2,
-    "icon_url": "https://th.bing.com/th/id/OIP.qxZbsyFpphxzRFnGUKyl6wHaHa?pid=ImgDet&rs=1",
-    "headline": "Building Responsive Web Apps with React",
-    "tags": ["#React", "#WebApp", "#tutorial"],
+    "url": "https://github.com/doTryCatch/Breado",
+    "headline": "Breado, A React Native mobile App for bakery inventory and payment records management",
+    "tags": ["#React","#React-Native", "#Expo-router", "#tailwindcss"],
     "post_date": "2023-09-12",
-    "watch_time": "watch 18m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/XYZ123abc/sddefault.jpg",
+    "thumbnail_url": "breado",
     "statistics": {
       "stars": 180,
       "comments": 20,
       "views": 1600
     },
-    "category": "WebApp"
+    "category": "Android"
   },
-  {
+   {
     "id": 3,
-    "icon_url": "https://th.bing.com/th/id/OIP.1a2B3cV5-uyFFHZqqJYXlAHaEo?pid=ImgDet&rs=1",
-    "headline": "Cybersecurity Fundamentals: Staying Safe Online",
-    "tags": ["#CyberSecurity", "#OnlineSafety", "#tutorial"],
-    "post_date": "2023-05-01",
-    "watch_time": "watch 15m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/123GHIjkl/sddefault.jpg",
-    "statistics": {
-      "stars": 220,
-      "comments": 28,
-      "views": 1400
-    },
-    "category": "Cyber Security"
-  },
-  {
-    "id": 4,
-    "icon_url": "https://th.bing.com/th/id/OIP.Tu4Ip3VxCNeWPH9H5Rny1QHaHa?pid=ImgDet&rs=1",
-    "headline": "Deep Learning for Image Recognition using TensorFlow",
-    "tags": ["#DeepLearning", "#TensorFlow", "#AI"],
+    "url": "https://github.com/doTryCatch/portfolio-website",
+    "headline": "Responsive personal portfolio showcasing skills, projects, and blogs.",
+
+    "tags": ["#NextJs", "#React", "#Tailwindcss","#Typescript"],
     "post_date": "2023-02-14",
-    "watch_time": "watch 25m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/789GHIjkl/sddefault.jpg",
+    "thumbnail_url": "portfolio",
     "statistics": {
       "stars": 260,
       "comments": 32,
       "views": 1700
     },
-    "category": "Machine Learning"
+    "category": "Web App"
   },
   {
-    "id": 5,
-    "icon_url": "https://th.bing.com/th/id/OIP.1LnC9c2AlztT_Ly7ZCVxHwHaHa?pid=ImgDet&rs=1",
-    "headline": "Game AI Basics: Implementing Pathfinding",
-    "tags": ["#GameAI", "#Pathfinding", "#tutorial"],
+    "id": 4,
+    "url": "https://github.com/doTryCatch/deramaa",
+    "headline": "Deramaa | A Rental web-app for tenants",
+
+    "tags": ["#NextJs", "#React","#Leaflet","#GraphQL", "#Tailwindcss","#Typescript"],
     "post_date": "2023-07-08",
-    "watch_time": "watch 12m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/abcDEF456/sddefault.jpg",
+    "thumbnail_url": "deramaa",
     "statistics": {
       "stars": 150,
       "comments": 25,
       "views": 1200
     },
-    "category": "Games"
+    "category": "Web App"
   },
-  {
-    "id": 6,
-    "icon_url": "https://th.bing.com/th/id/OIP.yk8dcz3JvZdFT5QzTOZ1hgHaEo?pid=ImgDet&rs=1",
-    "headline": "Introduction to Secure Web App Development",
-    "tags": ["#Security", "#WebApp", "#tutorial"],
-    "post_date": "2023-01-05",
-    "watch_time": "watch 22m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/456JKLmno/sddefault.jpg",
-    "statistics": {
-      "stars": 300,
-      "comments": 40,
-      "views": 2000
-    },
-    "category": "WebApp"
-  },
-  {
-    "id": 7,
-    "icon_url": "https://th.bing.com/th/id/OIP.5JdpQ3lYhJ3Hxxl3LQQlygHaEo?pid=ImgDet&rs=1",
-    "headline": "Transformers in NLP: Beyond Basics",
-    "tags": ["#Transformers", "#NLP", "#tutorial"],
-    "post_date": "2023-06-18",
-    "watch_time": "watch 30m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/789PQRstu/sddefault.jpg",
-    "statistics": {
-      "stars": 350,
-      "comments": 50,
-      "views": 2500
-    },
-    "category": "Machine Learning"
-  },
-  {
-    "id": 8,
-    "icon_url": "https://th.bing.com/th/id/OIP.m6CRAC98wEWEI1M48FQQhQHaEK?pid=ImgDet&rs=1",
-    "headline": "Penetration Testing Essentials for Beginners",
-    "tags": ["#PenTesting", "#CyberSecurity", "#tutorial"],
-    "post_date": "2023-03-21",
-    "watch_time": "watch 28m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/123XYZabc/sddefault.jpg",
-    "statistics": {
-      "stars": 240,
-      "comments": 38,
-      "views": 1900
-    },
-    "category": "Cyber Security"
-  },
-  {
-    "id": 9,
-    "icon_url": "https://th.bing.com/th/id/OIP.9NjHRWTwHlqql5SOqcgcBQHaEK?pid=ImgDet&rs=1",
-    "headline": "Building Multi-Player Games with Phaser.js",
-    "tags": ["#Phaser", "#GameDev", "#tutorial"],
+     {
+    "id": 5,
+    "url": "https://github.com/doTryCatch/Crown-of-Courage-2d-pygame-adventure-",
+    "headline": "A 2D Pygame game about a fearless girl on a mission to save her kidnapped brother. Experience intense battles, challenging puzzles, and an inspiring storyline.",
+    "tags": ["#Python", "#Pygame"],
     "post_date": "2023-09-01",
-    "watch_time": "watch 18m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/123DEFabc/sddefault.jpg",
+    "thumbnail_url": "crownofcourage",
     "statistics": {
       "stars": 180,
       "comments": 22,
       "views": 1500
     },
     "category": "Games"
-  },
-  {
-    "id": 10,
-    "icon_url": "https://th.bing.com/th/id/OIP.Lz7lZ6O7xlCxG7XjLQSbXwHaEK?pid=ImgDet&rs=1",
-    "headline": "Deploying Flask Apps with Docker",
-    "tags": ["#Flask", "#Docker", "#tutorial"],
-    "post_date": "2023-04-29",
-    "watch_time": "watch 26m time",
-    "thumbnail_url": "https://i.ytimg.com/vi/456XYZghi/sddefault.jpg",
-    "statistics": {
-      "stars": 280,
-      "comments": 40,
-      "views": 2300
-    },
-    "category": "WebApp"
   }
 ]

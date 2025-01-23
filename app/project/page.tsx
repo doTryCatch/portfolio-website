@@ -3,6 +3,7 @@ import Image from "next/image";
 import Projects from "../../src/data/projects.json";
 import Link from "next/link";
 import DropDown from "../../public/image/dropdown.png";
+import Img from "../../src/components/imageData"
 import { useState } from "react";
 
 function Project() {
@@ -56,7 +57,7 @@ function Project() {
           }`}
         >
           <ul className="md:flex space-y-2 md:gap-6 md:space-y-0 block m-6 text-size-1 text-slate-400">
-            {["All", "Game", "Web App", "Machine Learning", "Cyber Security"].map(
+            {["All", "Game", "Web App", "Android", "Machine Learning"].map(
               (category) => (
                 <li
                   key={category}
@@ -80,18 +81,17 @@ function Project() {
             className="project-card  fadeOut bg-black       w-full rounded-2xl  h-auto"
             key={project.id}
           >
-            <Link href={`/posts/${project.id}`}>
+            <Link href={project.url}>
               <div className="img-content">
                 <div className="relative w-full h-[25vh] rounded-2xl overflow-hidden">
-                  <Image
-                    src={"https://codewithsadee.github.io/vcard-personal-portfolio/assets/images/project-2.png"}
-                    alt="thumbnail"
-                    layout="fill"
-                    className="hover:scale-[1.2] duration-150 ease-in-out"
-                    
-                    objectFit="cover"
-                  />
-                </div>
+                 <Image
+  src={Img[project.thumbnail_url]}
+  alt="thumbnail"
+  layout="intrinsic" // Change layout to "intrinsic" for full-size image
+  className="hover:scale-[1.2] duration-150 ease-in-out" 
+  objectFit="none" // Ensures the image is shown in full size without cropping
+  priority 
+/>            </div>
               </div>
               <div className="content-area m-2 space-y-2 ">
                 <time
