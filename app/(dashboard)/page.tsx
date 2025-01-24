@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import MyResponsiveBar from "../../src/components/graph/barGraph";
 import MyResponsivePie from "../../src/components/graph/pieChart";
 import GithubStat from "../components/github_cal_heat_map";
@@ -31,6 +31,12 @@ const blogs = [
 ];
 
 function Dashboard() {
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+
+  
+  const handleYearClick = (year:number) => {
+    setSelectedYear(year);
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -97,11 +103,28 @@ function Dashboard() {
               </div>
          
               <div className="heat-map  my-20">
+              <div className="flex md:gap-10 justify-between md:justify-start text-slate-400">
 
                 <h1 className="text-lg font-bold ">My Work proof</h1>
+<div className="year w-40 overflow-hidden">
+<div className="year-container  cursor-grab  flex gap-4">
+        {[2023,2024,2025].map((year) => (
+          <div
+            key={year}
+            className={`year-item ${selectedYear === year ? 'selected' : ''}`}
+            onClick={() => handleYearClick(year)}
+          >
+            {year}
+          </div>
+        ))}
+      </div>
+</div>
+
+              </div>
+
                <div className="yellow-line h-1 w-10 bg-yellow-500 rounded-3xl" />
 
-<GithubStat/>
+<GithubStat date={selectedYear}/>
               </div>
 
               <TechStack/>
