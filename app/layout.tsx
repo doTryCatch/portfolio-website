@@ -24,6 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    <head>
+<link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.css"
+        />
+
+    </head>
+
       <body className={inter.className}>
         {/* Pass children as the page content */}
 

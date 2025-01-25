@@ -12,21 +12,20 @@ interface PageProps {
 }
 const PostPage:React.FC<PageProps> =  async ({params}) => {
     const id=params.id
-  const filePath = path.join(process.cwd(), "app", "content", `blog${id}.mdx`); // Path to markdown file
+  const filePath = path.join(process.cwd(), "app", "content", `blog${id}.md`); // Path to markdown file
 
   const fileContent = fs.readFileSync(filePath, "utf8"); // Read the markdown file
 
   // Convert Markdown to HTML
 
   const content = await markdownToHtml(fileContent);
-  console.log(content)
 
   return (
     <div>
 
       {/* Render HTML content */}
 
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div  className="markdown-body md:p-10 p-4" dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
 };

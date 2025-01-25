@@ -1,9 +1,9 @@
-# Roadmap for Web Development
-
-Hey there! 🌟 Starting web dev can feel like a lot, but chill—I got you covered. Let’s walk through the basics from scratch. By the end, you’ll know what’s what and how all the pieces fit together. Let’s go! 🚀
-
+# ******Roadmap for Web Development******
+
+Hey there! 🌟 Starting web dev can feel like a lot, but chill—I got you covered. Let’s walk through the basics from scratch. By the end, you’ll know what’s what and how all the pieces fit together. Let’s go! 🚀
 ## 1. Languages You Gotta Know
 First things first, the holy trinity of web dev:
+
 
 - **HTML**: The skeleton of your site 🦴.
 - **CSS**: The style, the looks, the drip 🎨.
@@ -11,7 +11,6 @@ First things first, the holy trinity of web dev:
 
 Once you’re comfy with these, you can flex with frameworks like React, Next.js, or whatever else is trendy. But first, the basics. 👇
 
----
 
 ## HTML
 HTML (HyperText Markup Language) is what structures your web page. Let’s break it down:
@@ -52,7 +51,6 @@ Here’s how a typical HTML document looks:
 
 HTML builds the structure, but it’s pretty plain on its own. So, what’s next? Styling it up with CSS! 🎨
 
----
 
 ## CSS
 CSS (Cascading Style Sheets) is like the wardrobe for your HTML. It makes things look appealing and user-friendly.
@@ -103,8 +101,6 @@ Link it in your HTML:
 ```
 
 CSS takes your basic structure and makes it pretty. But if you want to make it interactive, you’ll need JavaScript! 🧠
-
----
 
 ## JavaScript
 JavaScript (JS) makes your page come alive! Whether it’s responding to user actions or updating content dynamically, JS has your back.
@@ -164,7 +160,6 @@ function changeColor() {
 }
 ```
 
----
 
 ## Wrapping Up
 Once you’ve got the basics, here’s what to do next:
