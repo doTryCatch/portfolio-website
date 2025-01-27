@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Posted a blog on Web Development Basic Building Blocks - Check it and have a read.",
+    "summary": "This blog covers the essential building blocks of web development, including HTML, CSS, and JavaScript. It explains how these technologies come together to form the backbone of modern web applications.",
+    "url": "/blog/0",
+    "date": "2024-07-18"
+  },
+  {
+    "id": 2,
+    "title": "Posted a blog about Docker - Understand Containers and Virtualization",
+    "summary": "This blog provides an in-depth explanation of Docker, containers, and how Docker simplifies the process of developing, shipping, and running applications. It compares Docker with traditional virtualization methods.",
+    "url": "/blog/1",
+    "date": "2024-07-18"
+  }
+]

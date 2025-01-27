@@ -6,6 +6,7 @@ import Blogs from "../../src/data/blog.json"; // Assume this is a JSON file with
 
 import Link from "next/link";
 
+import Img from "../../src/components/imageData"
 import DropDown from "../../public/image/dropdown.png";
 
 import { useState } from "react";
@@ -38,11 +39,12 @@ function BlogPage() {
             className="blog-card bg-black  w-full rounded-2xl p-2 h-auto"
             key={key}
           >
+
             <Link href={`/posts/${blog.id}`}>
               <div className="img-content ">
                 <div className="relative  h-[32vh] rounded-2xl overflow-hidden">
                   <Image
-                    src={"https://i.ytimg.com/vi/ANE4eFdGvUg/sddefault.jpg"}
+                    src={Img[blog.thumbnail_url]}
                     alt="thumbnail"
                     layout="fill"
                     objectFit="cover"
@@ -52,6 +54,15 @@ function BlogPage() {
               </div>
 
               <div className="content-area m-2">
+              <div className="flex justify-between items-center">
+  <time
+                  dateTime={blog.read_time}
+                  className=" text-slate-300 text-[12px] flex justify-end mb-2"
+                >
+                  {blog.read_time}
+                </time>
+
+
                 <time
                   dateTime={blog.post_date}
                   className=" text-slate-300 text-[12px] flex justify-end mb-2"
@@ -59,10 +70,20 @@ function BlogPage() {
                   {blog.post_date}
                 </time>
 
+              </div>
                 <div className="headline  h-20">
                   <h1>
                     <p className="line-clamp-3">{blog.title}</p>
                   </h1>
+
+                <div className="techStackUse-list flex flex-wrap gap-3 text-center">
+                  {blog.tags.map((tag, index) => (
+                    <b className="tech-tag text-sm" key={index}>
+                      {tag}
+                    </b>
+                  ))}
+                </div>
+
                 </div>
 
                             </div>

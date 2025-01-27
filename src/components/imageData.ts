@@ -26,6 +26,10 @@ import Projects from "../../public/image/projects.png";
 import Qualification from "../../public/image/qualification.png";
 import Skill from "../../public/image/skill.png";
 import CrownOfCourage from '../../public/image/crown_of_courage.png'
+
+import Blog1 from "../../public/image/blog1.png"
+import Blog2 from "../../public/image/blog2.png"
+
 interface ImageMap {
   [key: string]: StaticImageData;
 }
@@ -57,6 +61,8 @@ const imgData :ImageMap= {
   qualification: Qualification,
   skill: Skill,
   crownofcourage:CrownOfCourage,
+  blog1:Blog1,
+  blog2:Blog2
 };
 
 export default imgData;

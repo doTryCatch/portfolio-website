@@ -1,11 +1,20 @@
 [
   {
     "id": "0",
-    "title": "Debugging Complex Bugs in Production",
-    "tags": ["Bugs", "Debugging", "Production"],
-    "post_date": "2024-08-01",
+    "title": "How to begin web development baisc guides..",
+    "tags": ["HTML", "CSS", "Javascript:"],
+    "post_date": "2025-01-24",
     "read_time": "5 min read",
-    "thumbnail_url": "https://th.bing.com/th/id/OIP.VH7cg73Iesjoi9lvFyirCgHaHa?rs=1&pid=ImgDetMain"
+    "thumbnail_url": "blog1"
+  },
+ {
+    "id": "1",
+    "title": "A Comprehensive Guide to Docker and Docker Compose: Understanding and Implementing Containers",
+    "tags": ["Dockerfile", "Docker-compose", "bash","<file>.yaml confg"],
+    "post_date": "2025-01-28",
+    "read_time": "5-7 min read",
+    "thumbnail_url": "blog2"
   }
+
 
 ]

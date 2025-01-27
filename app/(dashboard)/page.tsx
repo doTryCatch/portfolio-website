@@ -9,26 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import frontend from "../../public/image/frontend.png";
 import TechStack from "../components/tech_stack"
+import Link from "next/link"
 
+import Blogs from "../../src/data/activity.json"
 
-const blogs = [
-  {
-    id: 1,
-    title: "First Blog Post",
-    summary:
-      "This is the summary of the first blog post. This blog covers all the concepts of WebRTC and discusses whether it is serverless or server-based in a detailed way.",
-    url: "https://example.com/first-blog-post",
-    date: "2024-07-18",
-  },
- {
-    id: 2,
-    title: "second Blog Post",
-    summary:
-      "This is the summary of the first blog post. This blog covers all the concepts of WebRTC and discusses whether it is serverless or server-based in a detailed way.",
-    url: "https://example.com/first-blog-post",
-    date: "2024-07-18",
-  },
-];
+
 
 function Dashboard() {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -78,15 +63,17 @@ function Dashboard() {
         </div>
 
                       <div className="blogs-container md:mx-32 md:w-[75%]  rounded-lg p-4 ">
-                  {blogs.length === 0 ? (
+                  {Blogs.length === 0 ? (
                     <p className="text-gray-400 mt-2">No recent blog posts.</p>
                   ) : (
                     <Slider className="text-white md:mt-4  " {...settings}>
-                      {blogs.map((blog) => (
-                        <div key={blog.id} className="space-x-5">
+                      {Blogs.map((blog) => (
+
+            <Link href={`/posts/${blog.id}`} key={blog.id}>
+                        <div  className="space-x-5">
                           <div className="blog-card bg-gray-900 p-4 rounded-lg">
                             <div className="heading flex justify-between text-sm">
-                              <h3 className="font-semibold">{blog.title}</h3>
+                              <h3 className="font-semibold w-[70%]">{blog.title}</h3>
                               <small className="text-gray-400">
                                 {new Date(blog.date).toDateString()}
                               </small>
@@ -95,7 +82,9 @@ function Dashboard() {
                               {blog.summary}
                             </p>
                           </div>
+
                         </div>
+                        </Link>
                       ))}
                     </Slider>
                   )}
