@@ -13,4 +13,12 @@
     "url": "/blog/1",
     "date": "2024-07-18"
   }
+  ,
+{
+  "id": 3,
+  "title": "Posted a blog about Regression - Understanding Linear, Multi-Linear, and Logistic Regression",
+  "summary": "This blog provides a comprehensive guide to regression techniques, including simple linear, multi-linear, and logistic regression. It explains the mathematics behind these models and how they are used in machine learning.",
+  "url": "/blog/2",
+  "date": "2025-02-09"
+}
 ]
