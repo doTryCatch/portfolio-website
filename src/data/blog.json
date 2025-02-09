@@ -15,6 +15,15 @@
     "read_time": "5-7 min read",
     "thumbnail_url": "blog2"
   }
+  ,
+{
+  "id": "2",
+  "title": "A Comprehensive Guide to Regression: Linear, Multi-Linear, and Logistic Regression Explained",
+  "tags": ["Linear Regression", "Multi-Linear Regression", "Logistic Regression", "Mathematics", "Machine Learning", "Data Science"],
+  "post_date": "2025-02-09",
+  "read_time": "10-12 min read",
+  "thumbnail_url": "regression_guide"
+}
 
 
 ]
