@@ -26,6 +26,8 @@ import Projects from "../../public/image/projects.png";
 import Qualification from "../../public/image/qualification.png";
 import Skill from "../../public/image/skill.png";
 import CrownOfCourage from '../../public/image/crown_of_courage.png'
+import Multi_linear_regression from "../../public/image/multiregression.jpg"
+import LinearRegression from "../../public/image/linearregression.webp"
 
 import Blog1 from "../../public/image/blog1.png"
 import Blog2 from "../../public/image/blog2.png"
@@ -62,7 +64,11 @@ const imgData :ImageMap= {
   skill: Skill,
   crownofcourage:CrownOfCourage,
   blog1:Blog1,
-  blog2:Blog2
+  blog2:Blog2,
+
+  blog3:LinearRegression,
+  blog4:Multi_linear_regression
+
 };
 
 export default imgData;

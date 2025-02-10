@@ -18,11 +18,11 @@
   ,
 {
   "id": "2",
-  "title": "A Comprehensive Guide to Regression: Linear, Multi-Linear, and Logistic Regression Explained",
-  "tags": ["Linear Regression", "Multi-Linear Regression", "Logistic Regression", "Mathematics", "Machine Learning", "Data Science"],
+  "title": "A Comprehensive Guide to  Linear Regression Explained",
+  "tags": ["Linear Regression", "straigh line", "", "Machine Learning", "Data Science"],
   "post_date": "2025-02-09",
   "read_time": "10-12 min read",
-  "thumbnail_url": "regression_guide"
+  "thumbnail_url": "blog3"
 },
 {
   "id": "3",
@@ -30,7 +30,7 @@
   "tags": ["Multi-Linear Regression", "Mathematics", "Machine Learning", "Data Science", "Predictive Modeling"],
   "post_date": "2025-02-10",
   "read_time": "8-10 min read",
-  "thumbnail_url": "multi_linear_regression"
+  "thumbnail_url": "blog4"
 }
 
 
