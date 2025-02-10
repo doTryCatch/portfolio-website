@@ -119,22 +119,37 @@ $$
 which simplifies to:
 
 $$
- e_1 = y_1 - \hat{y_1}
+e_1 = y_1 - \hat{y}_1
 $$
 
 where:
 
-- **y** is the actual value
-- **\hat{y}** is the predicted value
+- \( y \) is the actual value  
+- \( \hat{y} \) is the predicted value  
 
-Similarly, for **i = 2**:
+Similarly, for \( i = 2 \):
 
 $$
- e_2 = y_2 - \hat{y_2}
+e_2 = y_2 - \hat{y}_2
 $$
 
-Summing from **i = 1** to **i = n**:
-### **To Proof:**  
+For all data points, we generalize:
+
+$$
+e_i = y_i - \hat{y}_i, \quad \forall i = 1, 2, \dots, n
+$$
+
+Summing from \( i = 1 \) to \( i = n \):
+
+$$
+RSS = \sum_{i=1}^{n} e_i^2
+$$
+
+which can be represented in matrix form as:
+
+$$
+RSS = E^T E = (Y - X B)^T (Y - X B)
+$$### **To Proof:**  
 $$
 \sum_{i=1}^{n} e_i^2 = E^T E
 $$
