@@ -34,7 +34,7 @@ function BlogPage() {
       </div>
 
       <div className="blog-card-container grid md:grid-cols-2 md:mx-6 grid-cols-1 grid-row-auto gap-8  page-component">
-        {Blogs.sort((a, b) => new Date(b.post_date) - new Date(a.post_date)).map((blog, key) => (
+        {Blogs.sort((a, b) =>Number(new Date(b.post_date)) - Number(new Date(a.post_date))).map((blog, key) => (
           <div
             className="blog-card bg-black  w-full rounded-2xl p-2 h-auto"
             key={key}
