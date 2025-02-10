@@ -23,6 +23,14 @@
   "post_date": "2025-02-09",
   "read_time": "10-12 min read",
   "thumbnail_url": "regression_guide"
+},
+{
+  "id": "3",
+  "title": "Understanding Multi Linear Regression: Concepts, Mathematics, and Applications",
+  "tags": ["Multi-Linear Regression", "Mathematics", "Machine Learning", "Data Science", "Predictive Modeling"],
+  "post_date": "2025-02-10",
+  "read_time": "8-10 min read",
+  "thumbnail_url": "multi_linear_regression"
 }
 
 
