@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/image";
 import Breado from "../../public/image/breado.jpg";
 import About from "../../public/image/about.png";
 import Backend from "../../public/image/backend.png";
@@ -25,17 +25,18 @@ import ProfilePng from "../../public/image/profile.png";
 import Projects from "../../public/image/projects.png";
 import Qualification from "../../public/image/qualification.png";
 import Skill from "../../public/image/skill.png";
-import CrownOfCourage from '../../public/image/crown_of_courage.png'
-import Multi_linear_regression from "../../public/image/multiregression.jpg"
-import LinearRegression from "../../public/image/linearregression.webp"
+import CrownOfCourage from "../../public/image/crown_of_courage.png";
+import Multi_linear_regression from "../../public/image/multiregression.jpg";
+import LinearRegression from "../../public/image/linearregression.webp";
+import BlogContentManagementProject from "../../public/image/blog_content_management.png";
 
-import Blog1 from "../../public/image/blog1.png"
-import Blog2 from "../../public/image/blog2.png"
+import Blog1 from "../../public/image/blog1.png";
+import Blog2 from "../../public/image/blog2.png";
 
-interface ImageMap {
+interface ImageMap {
   [key: string]: StaticImageData;
 }
-const imgData :ImageMap= {
+const imgData: ImageMap = {
   breado: Breado,
   about: About,
   backend: Backend,
@@ -62,13 +63,13 @@ const imgData :ImageMap= {
   projects: Projects,
   qualification: Qualification,
   skill: Skill,
-  crownofcourage:CrownOfCourage,
-  blog1:Blog1,
-  blog2:Blog2,
+  crownofcourage: CrownOfCourage,
+  blog1: Blog1,
+  blog2: Blog2,
+  blogcontentmanagement: BlogContentManagementProject,
 
-  blog3:LinearRegression,
-  blog4:Multi_linear_regression
-
+  blog3: LinearRegression,
+  blog4: Multi_linear_regression,
 };
 
 export default imgData;
